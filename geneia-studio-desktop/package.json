@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Geneia Studio IDE - Desktop & Web Codespaces",
   "main": "dist/electron/main.js",
+  "homepage": "https://geneia.dev",
+  "author": {
+    "name": "Moude AI Inc.",
+    "email": "support@moude.ai"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && tsc -p electron/tsconfig.json",
     "preview": "vite preview",
     "electron:dev": "concurrently \"vite --port 5173\" \"wait-on http://localhost:5173 && electron .\"",
     "electron:build": "npm run build && electron-builder",

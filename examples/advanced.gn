@@ -1,0 +1,32 @@
+! Advanced Geneia with Imports !
+
+"Import modules for extended functionality"
+
+import UI
+import Math
+import Graphics
+
+! Variables !
+str {title} = 'Geneia Advanced Demo'
+str {version} = '1.0.0'
+hold (count) = (5)
+
+peat {title}
+peat 'Version: '
+peat {version}
+
+! Using imported modules !
+peat 'Math constants available'
+peat 'Graphics module loaded'
+
+! Loops !
+repeat 'Processing...' & t.s = (3)
+
+turn (2) {
+    peat 'Turn iteration'
+    peat 'Multiple statements work'
+}
+
+! Exit !
+peat 'Program complete'
+exit (0)

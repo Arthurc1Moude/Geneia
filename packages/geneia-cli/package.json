@@ -1,0 +1,39 @@
+{
+  "name": "geneia",
+  "version": "1.0.0",
+  "description": "Geneia Programming Language - A modern, unique programming language with clean syntax",
+  "main": "index.js",
+  "bin": {
+    "geneia": "./bin/geneia.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node test/run.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "geneia",
+    "programming-language",
+    "compiler",
+    "interpreter",
+    "moude-ai"
+  ],
+  "author": {
+    "name": "Moude AI Inc.",
+    "url": "https://moude.ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moude-ai/geneia"
+  },
+  "bugs": {
+    "url": "https://github.com/moude-ai/geneia/issues"
+  },
+  "homepage": "https://geneia.dev",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "os": ["darwin", "linux", "win32"],
+  "cpu": ["x64", "arm64"]
+}

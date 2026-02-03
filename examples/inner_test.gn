@@ -1,0 +1,35 @@
+! Inner Functions with Flags Test !
+
+"String functions"
+str -u 'hello world'
+str -l 'HELLO WORLD'
+str -t '  spaces  '
+str -r 'geneia'
+
+"Time functions"
+time -n
+time -u
+time -y
+time -m
+time -d
+time -h
+
+"System functions"
+sys -o
+sys -a
+
+"Math functions"
+gmath -s (16)
+gmath -a (5)
+gmath -f (3.7)
+gmath -i (3.2)
+gmath -r (3.5)
+gmath -p
+gmath -E
+
+"Sleep test"
+sys -w (100)
+
+peat 'All inner functions work!'
+
+exit (0)

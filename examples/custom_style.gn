@@ -1,0 +1,39 @@
+! Geneia Custom Style Demo !
+"This demonstrates the unique Geneia syntax"
+
+! Import modules !
+import Math
+import UI
+
+! String variables use {} !
+str {greeting} = 'Hello, World!'
+str {lang} = 'Geneia'
+str {author} = 'Developer'
+
+! Number variables use () !
+hold (version) = (1)
+hold (build) = (0)
+hold (year) = (2024)
+
+! Output with peat !
+peat {greeting}
+peat 'Language: '
+peat {lang}
+
+! Quick repeat with & and time units !
+repeat 'Loading...' & t.s = (3)
+repeat 'Processing' & t.ms = (5)
+
+! Turn blocks for multiple iterations !
+turn (2) {
+    peat 'Iteration running'
+    peat 'Multiple statements'
+}
+
+! Running tips use "" !
+"Tips are displayed with [TIP] prefix"
+"Use import to extend functionality"
+
+! Exit with code !
+peat 'Demo complete!'
+exit (0)

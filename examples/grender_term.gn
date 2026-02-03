@@ -1,0 +1,20 @@
+! ================================================ !
+! G_Render - Terminal Output Demo                  !
+! Renders UI to ASCII art in terminal              !
+! ================================================ !
+
+import G_Render
+
+.GR.target 'term'
+.GR.title 'Terminal App'
+.GR.theme 'dark'
+
+.GR.view 'main'
+.GR.nav 'Home' 'About' 'Help'
+.GR.hero 'Welcome!' 'Terminal UI Demo'
+.GR.text 'This renders to terminal ASCII art.'
+.GR.card 'Feature 1' 'Cross-platform rendering'
+.GR.list 'Item A' 'Item B' 'Item C'
+.GR.btn 'OK' 'ok()'
+.GR.endview
+.GR.render

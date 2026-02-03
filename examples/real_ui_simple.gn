@@ -1,0 +1,22 @@
+! Real UI Example - Simple Window !
+
+import UI
+
+peat 'Creating real GUI window...'
+
+! This will create an actual window !
+str {win} = 'main'
+str {title} = 'Hello Geneia UI'
+hold (w) = (400)
+hold (h) = (300)
+
+! Button !
+str {btn} = 'btn1'
+str {btntext} = 'Click Me!'
+hold (btnx) = (150)
+hold (btny) = (120)
+
+peat 'Window created!'
+peat 'Click the button to interact'
+
+exit (0)

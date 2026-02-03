@@ -1,0 +1,16 @@
+! Test new var and str(n) syntax !
+
+"Testing new Geneia syntax"
+
+var {name} = 'Geneia'
+var {version} = '1.0.0'
+
+peat 'Language: '
+peat {name}
+
+str(1)
+str(2)
+
+peat 'Done!'
+
+exit (0)

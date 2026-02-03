@@ -1,0 +1,129 @@
+! ========================================= !
+! Geneia Programming Language              !
+! Complete Syntax Demonstration            !
+! ========================================= !
+
+"Welcome to Geneia - A unique programming language"
+
+! ========================================= !
+! MODULE IMPORTS                            !
+! ========================================= !
+
+import UI
+import Math
+import Graphics
+
+"Modules loaded successfully"
+
+! ========================================= !
+! VARIABLE DECLARATIONS                     !
+! ========================================= !
+
+! String variables use {} !
+str {title} = 'Geneia Complete Demo'
+str {author} = 'Developer'
+str {language} = 'Geneia'
+str {version} = '1.0.0'
+
+! Number variables use () !
+hold (year) = (2024)
+hold (major) = (1)
+hold (minor) = (0)
+hold (iterations) = (3)
+
+! ========================================= !
+! OUTPUT DEMONSTRATIONS                     !
+! ========================================= !
+
+peat '========================================='
+peat {title}
+peat '========================================='
+peat ''
+peat 'Language: '
+peat {language}
+peat 'Version: '
+peat {version}
+peat 'Author: '
+peat {author}
+peat ''
+
+! ========================================= !
+! LOOP DEMONSTRATIONS                       !
+! ========================================= !
+
+"Demonstrating repeat with time units"
+
+peat 'Quick Repeat Test:'
+repeat 'Processing...' & t.s = (3)
+
+peat ''
+peat 'Fast Repeat Test:'
+repeat 'Fast!' & t.ms = (5)
+
+peat ''
+
+! ========================================= !
+! TURN BLOCK DEMONSTRATIONS                 !
+! ========================================= !
+
+"Demonstrating turn blocks"
+
+peat 'Turn Block Test:'
+turn (2) {
+    peat '  - Iteration running'
+    peat '  - Multiple statements'
+    peat '  - All lines execute'
+}
+
+peat ''
+
+! ========================================= !
+! NESTED OPERATIONS                         !
+! ========================================= !
+
+"Demonstrating nested operations"
+
+peat 'Nested Operations:'
+turn (2) {
+    peat '  Outer block'
+    repeat '    Inner repeat' & t.s = (2)
+}
+
+peat ''
+
+! ========================================= !
+! BUILT-IN VARIABLES                        !
+! ========================================= !
+
+"Testing built-in variables"
+
+peat 'Built-in msg variable:'
+peat msg
+
+peat ''
+
+! ========================================= !
+! TIPS AND COMMENTS                         !
+! ========================================= !
+
+"Tips are displayed with [TIP] prefix"
+"Use import to extend functionality"
+"Variables must be declared before use"
+"Time units: t.s, t.ms, t.m, t.h, t.d"
+
+! This is a comment - not displayed !
+! Comments use ! ... ! syntax !
+
+! ========================================= !
+! COMPLETION                                !
+! ========================================= !
+
+peat ''
+peat '========================================='
+peat 'Demo Complete!'
+peat 'All features demonstrated successfully'
+peat '========================================='
+
+"Thank you for using Geneia"
+
+exit (0)

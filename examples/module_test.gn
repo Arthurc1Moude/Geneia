@@ -1,0 +1,39 @@
+! Module Functions Test !
+
+"Testing .Module.function syntax (with leading dot)"
+
+import Math
+import UI
+import String
+import GeneiaUI
+
+peat '.Math.sqrt (16):'
+.Math.sqrt (16)
+
+peat '.Math.pow (2) (8):'
+.Math.pow (2) (8)
+
+peat '.Math.pi:'
+.Math.pi
+
+peat '.Math.rand (100):'
+.Math.rand (100)
+
+peat '.String.upper:'
+.String.upper 'hello world'
+
+peat '.String.lower:'
+.String.lower 'HELLO WORLD'
+
+.UI.window 'My App'
+.UI.button 'Click Me'
+.UI.message 'Hello from Geneia!'
+
+"GeneiaUI - Full GUI module"
+.GeneiaUI.window 'Custom App'
+.GeneiaUI.theme 'dark'
+.GeneiaUI.button 'Submit'
+.GeneiaUI.label 'Welcome!'
+.GeneiaUI.run
+
+exit (0)

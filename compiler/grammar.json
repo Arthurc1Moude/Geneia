@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "name": "Geneia",
+  "description": "Geneia Programming Language Grammar - Synced with compiler/lexer.cpp",
+  
+  "keywords": [
+    "hold", "as", "be", "when", "loop", "give", "make", "call", "done",
+    "take", "send", "get", "repeat", "exit", "var", "str", "func", "back",
+    "check", "math", "join", "split", "size", "push", "pop", "peat", "turn",
+    "msg", "import", "from", "use", "export",
+    "add", "sub", "mul", "div", "mod", "rand",
+    "len", "wait", "stop", "skip", "each", "list", "set", "del", "has",
+    "gmath", "time", "sys",
+    "upper", "lower", "trim", "rev",
+    "now", "unix", "year", "month", "day", "hour", "sleep",
+    "os", "arch",
+    "sqrt", "abs", "sin", "cos", "tan", "floor", "ceil", "round", "pi", "e",
+    "int"
+  ],
+  
+  "timeUnits": ["s", "sec", "ms", "min", "m", "h", "hour", "d", "day"],
+  
+  "operators": ["(", ")", "{", "}", "[", "]", ";", ",", "=", "+", "-", "--", "*", "/", "%", "^", "?", "??", "&", "&&", "."],
+  
+  "tokenTypes": {
+    "KEYWORD": "Language keywords",
+    "IDENTIFIER": "Variable and function names",
+    "NUMBER": "Numeric literals",
+    "STRING": "String literals in {braces}",
+    "ECHO": "Echo strings in 'single quotes'",
+    "TIP": "Tip strings in \"double quotes\"",
+    "COMMENT": "Comments in !exclamation marks!",
+    "OPERATOR": "Operators and punctuation",
+    "INT_CMD": "INT command system keyword"
+  },
+  
+  "syntax": {
+    "comment": {
+      "pattern": "! ... !",
+      "description": "Comments are wrapped in exclamation marks",
+      "example": "! This is a comment !"
+    },
+    "tip": {
+      "pattern": "\"...\"",
+      "description": "Tips/hints shown during execution",
+      "example": "\"Welcome to Geneia!\""
+    },
+    "echo": {
+      "pattern": "'...'",
+      "description": "String literals for output",
+      "example": "peat 'Hello, World!'"
+    },
+    "stringVar": {
+      "pattern": "{name}",
+      "description": "String variable reference",
+      "example": "var {name} = 'value'"
+    },
+    "numberVar": {
+      "pattern": "(name)",
+      "description": "Number variable reference",
+      "example": "hold (count) = (10)"
+    },
+    "varDeclaration": {
+      "patterns": ["var {name} = 'value'", "str {name} = 'value'"],
+      "description": "Declare a string variable"
+    },
+    "holdDeclaration": {
+      "pattern": "hold (name) = (value)",
+      "description": "Declare a number variable"
+    },
+    "peat": {
+      "pattern": "peat <value>",
+      "description": "Print/output a value",
+      "examples": ["peat 'Hello'", "peat {name}", "peat (count)"]
+    },
+    "turn": {
+      "pattern": "turn (count) { ... }",
+      "description": "Loop block that executes count times"
+    },
+    "repeat": {
+      "pattern": "repeat 'message' & t.unit = (count)",
+      "description": "Timed repeat with time unit (s, ms, min, etc.)"
+    },
+    "func": {
+      "pattern": "func name { ... }",
+      "description": "Function definition"
+    },
+    "call": {
+      "pattern": "call name",
+      "description": "Call a function"
+    },
+    "exit": {
+      "pattern": "exit (code)",
+      "description": "Exit program with code"
+    },
+    "import": {
+      "pattern": "import ModuleName",
+      "description": "Import a module"
+    },
+    "moduleCall": {
+      "pattern": ".Module.function",
+      "description": "Call a module function"
+    },
+    "check": {
+      "pattern": "check (condition) { ... }",
+      "description": "Conditional block"
+    }
+  },
+  
+  "modules": [
+    "UI", "GeneiaUI", "OpenGSL", "GWeb", "GWS", "W2G", "GRender", "GNEL",
+    "Math", "File", "Network", "Graphics"
+  ]
+}

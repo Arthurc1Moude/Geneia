@@ -1,0 +1,5 @@
+show "Testing: str = repeat && exit"
+
+str msg = repeat "Hello" 3 && exit 0
+
+show "This won't show because of exit"

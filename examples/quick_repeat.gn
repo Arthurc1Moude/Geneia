@@ -1,0 +1,13 @@
+show "Quick repeat with ??"
+
+?? 3 {
+    show "Block repeat 3 times"
+}
+
+?? 5 {
+    peat "Five times!"
+}
+
+?? [[??]] show "Quick inline repeat"
+
+show "Done with repeats"

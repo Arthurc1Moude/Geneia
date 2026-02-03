@@ -1,0 +1,229 @@
+{
+  "Print": {
+    "prefix": "peat",
+    "body": ["peat '${1:message}'"],
+    "description": "Print a message"
+  },
+  "Print Variable": {
+    "prefix": "peatv",
+    "body": ["peat {${1:variable}}"],
+    "description": "Print a variable"
+  },
+  "Tip": {
+    "prefix": "tip",
+    "body": ["\"${1:tip message}\""],
+    "description": "Display a tip/comment"
+  },
+  "Comment": {
+    "prefix": "!",
+    "body": ["! ${1:comment} !"],
+    "description": "Block comment"
+  },
+  "Variable String": {
+    "prefix": "str",
+    "body": ["str {${1:name}} = '${2:value}'"],
+    "description": "Declare a string variable"
+  },
+  "Variable Number": {
+    "prefix": "hold",
+    "body": ["hold {${1:name}} = (${2:0})"],
+    "description": "Declare a number variable"
+  },
+  "Function": {
+    "prefix": "func",
+    "body": [
+      "func ${1:name} {",
+      "\t${2:! body !}",
+      "}"
+    ],
+    "description": "Define a function"
+  },
+  "Loop Turn": {
+    "prefix": "turn",
+    "body": [
+      "turn (${1:count}) {",
+      "\t${2:! body !}",
+      "}"
+    ],
+    "description": "Loop N times"
+  },
+  "Loop Repeat": {
+    "prefix": "repeat",
+    "body": ["repeat '${1:message}' & t.${2:s} = (${3:count})"],
+    "description": "Repeat with time unit"
+  },
+  "Check Condition": {
+    "prefix": "check",
+    "body": ["check {${1:condition}}"],
+    "description": "Conditional check"
+  },
+  "Exit": {
+    "prefix": "exit",
+    "body": ["exit (${1:0})"],
+    "description": "Exit program"
+  },
+  "Import Module": {
+    "prefix": "import",
+    "body": ["import ${1:ModuleName}"],
+    "description": "Import a module"
+  },
+  "Use Module": {
+    "prefix": "use",
+    "body": ["use ${1:ModuleName}"],
+    "description": "Use a module"
+  },
+  "String Upper": {
+    "prefix": "stru",
+    "body": ["str -u '${1:text}'"],
+    "description": "Convert string to uppercase"
+  },
+  "String Lower": {
+    "prefix": "strl",
+    "body": ["str -l '${1:text}'"],
+    "description": "Convert string to lowercase"
+  },
+  "String Trim": {
+    "prefix": "strt",
+    "body": ["str -t '${1:text}'"],
+    "description": "Trim whitespace from string"
+  },
+  "String Reverse": {
+    "prefix": "strr",
+    "body": ["str -r '${1:text}'"],
+    "description": "Reverse a string"
+  },
+  "Time Now": {
+    "prefix": "timenow",
+    "body": ["time -n"],
+    "description": "Get current datetime"
+  },
+  "Time Unix": {
+    "prefix": "timeunix",
+    "body": ["time -u"],
+    "description": "Get Unix timestamp"
+  },
+  "Time Year": {
+    "prefix": "timey",
+    "body": ["time -y"],
+    "description": "Get current year"
+  },
+  "System OS": {
+    "prefix": "sysos",
+    "body": ["sys -o"],
+    "description": "Get operating system"
+  },
+  "System Arch": {
+    "prefix": "sysarch",
+    "body": ["sys -a"],
+    "description": "Get system architecture"
+  },
+  "System Sleep": {
+    "prefix": "sleep",
+    "body": ["sys -w (${1:1000})"],
+    "description": "Sleep for milliseconds"
+  },
+  "Math Sqrt": {
+    "prefix": "sqrt",
+    "body": ["gmath -s (${1:number})"],
+    "description": "Square root"
+  },
+  "Math Abs": {
+    "prefix": "abs",
+    "body": ["gmath -a (${1:number})"],
+    "description": "Absolute value"
+  },
+  "Math Floor": {
+    "prefix": "floor",
+    "body": ["gmath -f (${1:number})"],
+    "description": "Floor value"
+  },
+  "Math Ceil": {
+    "prefix": "ceil",
+    "body": ["gmath -i (${1:number})"],
+    "description": "Ceiling value"
+  },
+  "Math Round": {
+    "prefix": "round",
+    "body": ["gmath -r (${1:number})"],
+    "description": "Round value"
+  },
+  "Math Pi": {
+    "prefix": "pi",
+    "body": ["gmath -p"],
+    "description": "Pi constant"
+  },
+  "Math E": {
+    "prefix": "euler",
+    "body": ["gmath -E"],
+    "description": "Euler's number"
+  },
+  "Math Convert": {
+    "prefix": "convert",
+    "body": ["gmath -C (${1:value}) '${2:from}' '${3:to}'"],
+    "description": "Convert units"
+  },
+  "Math Add": {
+    "prefix": "gmathadd",
+    "body": ["gmath (${1:a}) + (${2:b})"],
+    "description": "Add two numbers"
+  },
+  "Math Subtract": {
+    "prefix": "gmathsub",
+    "body": ["gmath (${1:a}) - (${2:b})"],
+    "description": "Subtract two numbers"
+  },
+  "Math Multiply": {
+    "prefix": "gmathmul",
+    "body": ["gmath (${1:a}) * (${2:b})"],
+    "description": "Multiply two numbers"
+  },
+  "Math Divide": {
+    "prefix": "gmathdiv",
+    "body": ["gmath (${1:a}) / (${2:b})"],
+    "description": "Divide two numbers"
+  },
+  "Module String Upper": {
+    "prefix": ".stru",
+    "body": [".String.upper '${1:text}'"],
+    "description": "Module: String uppercase"
+  },
+  "Module Time Now": {
+    "prefix": ".timenow",
+    "body": [".Time.now"],
+    "description": "Module: Current time"
+  },
+  "Module Math Sqrt": {
+    "prefix": ".sqrt",
+    "body": [".Math.sqrt (${1:number})"],
+    "description": "Module: Square root"
+  },
+  "Module Sys OS": {
+    "prefix": ".sysos",
+    "body": [".Sys.os"],
+    "description": "Module: Operating system"
+  },
+  "Hello World": {
+    "prefix": "hello",
+    "body": [
+      "! Hello World in Geneia !",
+      "",
+      "peat 'Hello, World!'",
+      "",
+      "exit (0)"
+    ],
+    "description": "Hello World template"
+  },
+  "Basic Template": {
+    "prefix": "template",
+    "body": [
+      "! ${1:Program Name} !",
+      "",
+      "\"${2:Description}\"",
+      "",
+      "${3:! code here !}",
+      "",
+      "exit (0)"
+    ],
+    "description": "Basic Geneia template"
+  }
+}

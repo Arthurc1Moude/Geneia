@@ -1,0 +1,119 @@
+%YAML 1.2
+---
+name: Geneia
+file_extensions: [gn]
+scope: source.geneia
+
+contexts:
+  main:
+    # Comments
+    - match: '!'
+      scope: punctuation.definition.comment.geneia
+      push: comment
+
+    # Tips (double quotes)
+    - match: '"'
+      scope: punctuation.definition.string.begin.geneia
+      push: tip
+
+    # Strings (single quotes)
+    - match: "'"
+      scope: punctuation.definition.string.begin.geneia
+      push: string
+
+    # Variables (braces)
+    - match: '\{'
+      scope: punctuation.definition.variable.begin.geneia
+      push: variable
+
+    # Module functions
+    - match: '\.(String|Time|Math|Sys|Array|Render|GWS|W2G|GNEL|Web|UI|GSL)\.[a-zA-Z]+'
+      scope: entity.name.function.module.geneia
+
+    # Module imports
+    - match: '\b(G_Render|G_Web|OpenGSL|OpenGWS|OpenW2G|OpenGNEL|GeneiaUI)\b'
+      scope: support.class.geneia
+
+    # Long flags
+    - match: '--[a-zA-Z]+'
+      scope: constant.language.flag.geneia
+
+    # Short flags
+    - match: '\s-[a-zA-Z]\b'
+      scope: constant.language.flag.geneia
+
+    # Control keywords
+    - match: '\b(peat|repeat|turn|exit|check|when|loop|func|give|back|stop|skip|each)\b'
+      scope: keyword.control.geneia
+
+    # Import keywords
+    - match: '\b(import|use|from|export)\b'
+      scope: keyword.control.import.geneia
+
+    # Storage types
+    - match: '\b(str|hold|var|msg)\b'
+      scope: storage.type.geneia
+
+    # Builtin functions
+    - match: '\b(gmath|time|sys)\b'
+      scope: support.function.builtin.geneia
+
+    # Math functions
+    - match: '\b(add|sub|mul|div|mod|rand|len|wait|sqrt|abs|sin|cos|tan|floor|ceil|round|pi|e)\b'
+      scope: support.function.math.geneia
+
+    # String functions
+    - match: '\b(upper|lower|trim|rev|math|join|split|size|push|pop)\b'
+      scope: support.function.string.geneia
+
+    # Time functions
+    - match: '\b(now|unix|year|month|day|hour)\b'
+      scope: support.function.time.geneia
+
+    # System functions
+    - match: '\b(os|arch|sleep)\b'
+      scope: support.function.system.geneia
+
+    # Collection functions
+    - match: '\b(list|set|del|has|make|call|done|take|send|get)\b'
+      scope: support.function.collection.geneia
+
+    # Time units
+    - match: '\bt\.[a-z]+\b'
+      scope: support.type.time.geneia
+
+    # Numbers in parentheses
+    - match: '\(\s*-?\d+(\.\d+)?\s*\)'
+      scope: constant.numeric.geneia
+
+    # Numbers
+    - match: '\b\d+(\.\d+)?\b'
+      scope: constant.numeric.geneia
+
+    # Operators
+    - match: '(&&|\|\||=|\+|-|\*|/|%|\^|&)'
+      scope: keyword.operator.geneia
+
+  comment:
+    - meta_scope: comment.block.geneia
+    - match: '!'
+      scope: punctuation.definition.comment.geneia
+      pop: true
+
+  tip:
+    - meta_scope: string.quoted.double.tip.geneia
+    - match: '"'
+      scope: punctuation.definition.string.end.geneia
+      pop: true
+
+  string:
+    - meta_scope: string.quoted.single.geneia
+    - match: "'"
+      scope: punctuation.definition.string.end.geneia
+      pop: true
+
+  variable:
+    - meta_scope: variable.parameter.geneia
+    - match: '\}'
+      scope: punctuation.definition.variable.end.geneia
+      pop: true

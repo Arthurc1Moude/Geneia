@@ -1,0 +1,22 @@
+show "=== Geneia Premium Features ==="
+
+str greeting as "Hello"
+show greeting
+
+str name as "Geneia"
+show name
+
+hold count as 3
+show "Repeat 3 times:"
+repeat 3
+show "Loop iteration"
+
+show "String operations:"
+str msg as "Pro"
+show msg
+
+hold num as 100
+show num
+
+show "Exit with code:"
+exit 0

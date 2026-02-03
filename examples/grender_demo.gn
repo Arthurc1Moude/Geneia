@@ -1,0 +1,50 @@
+! ================================================ !
+! G_Render Demo - Universal Rendering Module       !
+! Render same UI to web, desktop, term, or json    !
+! ================================================ !
+
+import G_Render
+
+! Set render target (web/desktop/term/json)
+.GR.target 'web'
+
+! Set app title and theme
+.GR.title 'G_Render Demo App'
+.GR.theme 'dark'
+
+! Custom style colors
+.GR.style 'accent' '#00d4ff'
+.GR.style 'bg' '#0a0a1a'
+.GR.style 'text' '#f0f0f0'
+
+! Create main view
+.GR.view 'main'
+
+! Navigation bar
+.GR.nav 'Home' 'About' 'Contact'
+
+! Hero section
+.GR.hero 'Welcome to G_Render' 'Universal UI rendering for Geneia'
+
+! Text content
+.GR.text 'G_Render lets you write UI once and render to multiple targets.'
+
+! Grid with cards
+.GR.grid (3)
+.GR.card 'Web' 'Render to HTML/CSS'
+.GR.card 'Desktop' 'Render to native UI'
+.GR.card 'Terminal' 'Render to ASCII art'
+.GR.endgrid
+
+! List of features
+.GR.list 'Cross-platform' 'Single codebase' 'Multiple outputs' 'Easy syntax'
+
+! Buttons
+.GR.btn 'Get Started' 'start()'
+.GR.btn 'Learn More' 'learn()'
+
+! End view
+.GR.endview
+
+! Render to target
+.GR.render

@@ -1,0 +1,29 @@
+! Extended Features Test !
+
+"Testing new Geneia features"
+
+import Math
+
+var {name} = 'Geneia'
+hold (x) = (10)
+
+peat 'Name: '
+peat {name}
+
+peat 'Starting x = 10'
+
+add {x} = (5)
+peat 'After add 5: x = 15'
+
+mul {x} = (2)
+peat 'After mul 2: x = 30'
+
+rand {r} = (100)
+peat 'Random number generated'
+
+str(U+2764)
+str(U+2605)
+
+msg 'All tests complete!'
+
+exit (0)

@@ -1,0 +1,56 @@
+! OpenGWS Demo - Package Manager + Web Server !
+
+"OpenGWS: Like npm + node for Geneia"
+
+import OpenGWS
+
+! Package Manager Demo !
+peat 'OpenGWS Package Manager'
+peat '========================'
+
+.GWS.search 'server'
+.GWS.install 'express'
+.GWS.install 'flask'
+.GWS.pkglist
+.GWS.update
+
+peat ''
+peat 'Web Server Demo'
+peat '================'
+
+! Set server port !
+.GWS.port (8080)
+
+! Define home route !
+.GWS.route '/'
+.GWS.page 'OpenGWS Server'
+.GWS.style 'bg' '#0a0a1a'
+.GWS.style 'text' '#f0f0f0'
+.GWS.style 'accent' '#00d4ff'
+.GWS.nav 'Home' 'About' 'API'
+.GWS.hero 'OpenGWS' 'Package Manager + Web Server for Geneia'
+.GWS.sect 'Features'
+.GWS.card 'Package Manager' 'Install packages with gwsl-get'
+.GWS.card 'Web Server' 'Run servers on any port'
+.GWS.card 'Routes' 'Define multiple routes'
+.GWS.endsec
+.GWS.foot 'Powered by OpenGWS'
+.GWS.endroute
+
+! Define about route !
+.GWS.route '/about'
+.GWS.page 'About OpenGWS'
+.GWS.style 'bg' '#0a0a1a'
+.GWS.style 'text' '#f0f0f0'
+.GWS.style 'accent' '#7c3aed'
+.GWS.nav 'Home' 'About' 'API'
+.GWS.hero 'About' 'OpenGWS - Open Public Geneia Web Server Services Kit'
+.GWS.sect 'What is OpenGWS?'
+.GWS.text 'OpenGWS combines package management and web server functionality.'
+.GWS.text 'Like npm + node, but for Geneia!'
+.GWS.endsec
+.GWS.foot 'Powered by OpenGWS'
+.GWS.endroute
+
+! Start the server !
+.GWS.serve

@@ -1,0 +1,74 @@
+! OpenGWS Demo - Geneia Web Server !
+
+"Run a web server with Geneia - no HTML files needed"
+
+import OpenGWS
+
+! Set server port !
+.GWS.port (8888)
+
+! Define home route !
+.GWS.route '/'
+.GWS.page 'Geneia Server'
+.GWS.style 'bg' '#0a0a1a'
+.GWS.style 'text' '#f0f0f0'
+.GWS.style 'accent' '#00d4ff'
+.GWS.nav 'Home' 'About' 'API'
+.GWS.hero 'OpenGWS' 'Geneia Web Server - No HTML needed'
+.GWS.sect 'Welcome'
+.GWS.text 'This website is served directly by Geneia using OpenGWS.'
+.GWS.text 'No HTML files were created - everything runs from Geneia code!'
+.GWS.btn 'Learn More' '/about'
+.GWS.endsec
+.GWS.foot 'Powered by OpenGWS'
+.GWS.endroute
+
+! Define about route !
+.GWS.route '/about'
+.GWS.page 'About - Geneia Server'
+.GWS.style 'bg' '#0a0a1a'
+.GWS.style 'text' '#f0f0f0'
+.GWS.style 'accent' '#00d4ff'
+.GWS.nav 'Home' 'About' 'API'
+.GWS.hero 'About OpenGWS' 'Open Public Geneia Web Server Services Kit'
+.GWS.sect 'Features'
+.GWS.grid (3)
+.GWS.card 'No HTML' 'Write websites in pure Geneia syntax'
+.GWS.card 'Live Server' 'Runs on any port you choose'
+.GWS.card 'Multiple Routes' 'Define as many pages as you need'
+.GWS.endgrid
+.GWS.endsec
+.GWS.sect 'How It Works'
+.GWS.list 'Import OpenGWS module' 'Set port with .GWS.port' 'Define routes with .GWS.route' 'Add content with .GWS.* functions' 'Start server with .GWS.serve'
+.GWS.endsec
+.GWS.foot 'Powered by OpenGWS'
+.GWS.endroute
+
+! Define API route !
+.GWS.route '/api'
+.GWS.page 'API - Geneia Server'
+.GWS.style 'bg' '#0a0a1a'
+.GWS.style 'text' '#f0f0f0'
+.GWS.style 'accent' '#7c3aed'
+.GWS.nav 'Home' 'About' 'API'
+.GWS.hero 'API Documentation' 'OpenGWS Functions Reference'
+.GWS.sect 'Available Functions'
+.GWS.card '.GWS.port (number)' 'Set the server port'
+.GWS.card '.GWS.route path' 'Start defining a route'
+.GWS.card '.GWS.page title' 'Set page title'
+.GWS.card '.GWS.style prop value' 'Set style (bg, text, accent, font)'
+.GWS.card '.GWS.nav items...' 'Create navigation bar'
+.GWS.card '.GWS.hero title subtitle' 'Create hero section'
+.GWS.card '.GWS.sect title' 'Start a section'
+.GWS.card '.GWS.text content' 'Add paragraph text'
+.GWS.card '.GWS.btn text link' 'Add a button'
+.GWS.card '.GWS.card title content' 'Add a card'
+.GWS.card '.GWS.list items...' 'Add a list'
+.GWS.card '.GWS.endroute' 'Finish route definition'
+.GWS.card '.GWS.serve' 'Start the server'
+.GWS.endsec
+.GWS.foot 'Powered by OpenGWS'
+.GWS.endroute
+
+! Start the server !
+.GWS.serve

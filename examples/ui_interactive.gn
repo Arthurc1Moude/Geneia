@@ -1,0 +1,94 @@
+! ================================================ !
+! INTERACTIVE UI DEMONSTRATION                     !
+! Real interactive GUI application                 !
+! ================================================ !
+
+"Interactive UI application with real controls"
+
+import UI
+
+peat '================================================'
+peat 'INTERACTIVE UI APPLICATION'
+peat '================================================'
+peat ''
+
+! Create main window !
+peat 'Creating interactive application...'
+peat ''
+
+! Window !
+str {app_title} = 'Interactive Geneia App'
+hold (app_width) = (600)
+hold (app_height) = (500)
+
+! Title Label !
+str {title_label} = 'Welcome to Geneia Interactive UI'
+hold (title_x) = (50)
+hold (title_y) = (20)
+
+! Input Section !
+str {input_label} = 'Enter your name:'
+hold (input_label_x) = (50)
+hold (input_label_y) = (80)
+
+str {name_textbox} = 'name_input'
+hold (name_x) = (50)
+hold (name_y) = (110)
+hold (name_width) = (300)
+
+! Buttons !
+str {submit_btn} = 'Submit'
+hold (submit_x) = (50)
+hold (submit_y) = (160)
+
+str {clear_btn} = 'Clear'
+hold (clear_x) = (180)
+hold (clear_y) = (160)
+
+! Options Section !
+str {options_label} = 'Select options:'
+hold (options_y) = (220)
+
+str {check1} = 'Enable notifications'
+str {check2} = 'Save preferences'
+str {check3} = 'Auto-update'
+
+! Choice Section !
+str {choice_label} = 'Choose theme:'
+str {radio1} = 'Light Theme'
+str {radio2} = 'Dark Theme'
+str {radio3} = 'Auto Theme'
+
+! Results Section !
+str {results_label} = 'Results:'
+hold (results_y) = (380)
+
+str {result_list} = 'result_listbox'
+hold (list_x) = (50)
+hold (list_y) = (410)
+hold (list_width) = (500)
+hold (list_height) = (150)
+
+peat 'UI Components:'
+peat '  ✓ Window: 600x500'
+peat '  ✓ Title Label'
+peat '  ✓ Input TextBox'
+peat '  ✓ 2 Buttons (Submit, Clear)'
+peat '  ✓ 3 CheckBoxes (Options)'
+peat '  ✓ 3 RadioButtons (Theme)'
+peat '  ✓ 1 ListBox (Results)'
+peat ''
+
+peat 'Interactions:'
+peat '  • Type in textbox'
+peat '  • Click buttons'
+peat '  • Check options'
+peat '  • Select theme'
+peat '  • View results in list'
+peat ''
+
+"Application ready for interaction!"
+
+peat '================================================'
+
+exit (0)

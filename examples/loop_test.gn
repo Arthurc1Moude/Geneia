@@ -1,0 +1,13 @@
+show "Starting loops"
+
+repeat 3
+show "Loop iteration"
+
+show "Between loops"
+
+repeat 5
+show "Second loop"
+
+show "Before exit"
+exit
+show "After exit - won't show"

@@ -1,0 +1,38 @@
+# INT Inc. Commands Configuration File
+# Define custom terminal commands here
+# Format: [command_name] followed by shell commands
+
+[hello]
+echo "Hello from INT!"
+
+[list_files]
+ls -la
+
+[show_date]
+date
+
+[system_info]
+uname -a
+
+[disk_usage]
+df -h
+
+[memory_info]
+free -h
+
+[network_status]
+ip addr show
+
+[clean_temp]
+rm -rf /tmp/geneia_*
+echo "Temp files cleaned"
+
+[build_project]
+make clean
+make all
+echo "Build complete!"
+
+[run_tests]
+./geneia examples/hello.gn
+./geneia examples/int_demo.gn
+echo "Tests complete!"

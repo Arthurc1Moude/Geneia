@@ -1,0 +1,79 @@
+! G_Math Unit Conversion Test !
+
+"Length conversions"
+gmath -C (100) 'cm' 'in'
+gmath -C (1) 'km' 'mi'
+gmath -C (5280) 'ft' 'mi'
+gmath -C (1) 'm' 'ft'
+gmath --convert (10) 'mm' 'cm'
+
+"Weight conversions"
+gmath -C (1) 'kg' 'lb'
+gmath -C (16) 'oz' 'lb'
+gmath -C (1000) 'g' 'kg'
+gmath --convert (1) 'ton' 'kg'
+
+"Temperature conversions"
+gmath -C (0) 'c' 'f'
+gmath -C (100) 'c' 'f'
+gmath -C (32) 'f' 'c'
+gmath -C (212) 'f' 'c'
+gmath -C (0) 'c' 'k'
+gmath --convert (273.15) 'k' 'c'
+
+"Time conversions"
+gmath -C (1) 'hour' 'min'
+gmath -C (1) 'day' 'hours'
+gmath -C (1000) 'ms' 's'
+gmath -C (1) 'week' 'days'
+gmath --convert (365) 'days' 'year'
+
+"Data conversions"
+gmath -C (1) 'gb' 'mb'
+gmath -C (1024) 'kb' 'mb'
+gmath -C (8) 'bit' 'byte'
+gmath --convert (1) 'tb' 'gb'
+
+"Speed conversions"
+gmath -C (100) 'kmh' 'mph'
+gmath -C (1) 'mach' 'kmh'
+gmath --convert (60) 'mph' 'kmh'
+
+"Area conversions"
+gmath -C (1) 'sqkm' 'sqmi'
+gmath -C (1) 'acre' 'sqft'
+gmath --convert (1) 'ha' 'acre'
+
+"Volume conversions"
+gmath -C (1) 'gal' 'l'
+gmath -C (1) 'l' 'ml'
+gmath --convert (1) 'cup' 'ml'
+
+"Angle conversions"
+gmath -C (180) 'deg' 'rad'
+gmath -C (1) 'turn' 'deg'
+gmath --convert (3.14159) 'rad' 'deg'
+
+"Pressure conversions"
+gmath -C (1) 'atm' 'psi'
+gmath -C (1) 'bar' 'psi'
+gmath --convert (101325) 'pa' 'atm'
+
+"Energy conversions"
+gmath -C (1) 'kwh' 'j'
+gmath -C (1) 'cal' 'j'
+gmath --convert (1000) 'kcal' 'kj'
+
+"Power conversions"
+gmath -C (1) 'hp' 'w'
+gmath -C (1) 'kw' 'hp'
+gmath --convert (1000) 'w' 'kw'
+
+"Frequency conversions"
+gmath -C (1) 'ghz' 'mhz'
+gmath -C (1000) 'khz' 'mhz'
+gmath --convert (60) 'rpm' 'hz'
+
+peat 'All conversions done!'
+
+exit (0)

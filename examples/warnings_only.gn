@@ -1,0 +1,28 @@
+! Warnings Only Example - This file produces ONLY warnings, no errors !
+
+"This Geneia file demonstrates warning-only code patterns"
+
+! Warning W005: Unused variables !
+var {unusedVar1} = 'never used'
+var {unusedVar2} = 42
+var {unusedVar3} = 'also unused'
+
+! Warning W004: Empty string assignment !
+var {emptyStr} = ''
+
+! Warning W006: Duplicate variable declaration !
+var {duplicate} = 'first'
+var {duplicate} = 'second'
+
+! Warning W007: Magic number in hold !
+hold 5000
+
+! Warning W010: Long line exceeds 100 characters !
+peat 'This is a very long line that exceeds one hundred characters and will trigger a style warning for readability purposes in the code'
+
+! These lines are correct - no warnings !
+var {message} = 'Hello'
+peat {message}
+peat 'Done!'
+
+exit (0)

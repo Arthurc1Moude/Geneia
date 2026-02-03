@@ -1,0 +1,22 @@
+! OpenW2G Demo - Web to Geneia Converter !
+
+"Convert HTML to Geneia code"
+
+import OpenW2G
+
+peat 'OpenW2G - Web to Geneia Converter'
+peat '==================================='
+
+! Convert HTML string to Geneia !
+.W2G.convert '<html><head><title>Test</title></head><body><h1>Hello World</h1><p>This is a paragraph.</p><button>Click Me</button><footer>Footer text</footer></body></html>'
+
+! View the generated code !
+.W2G.view
+
+! Save to file !
+.W2G.save 'converted_page.gn'
+
+peat ''
+peat 'Conversion complete!'
+
+exit (0)

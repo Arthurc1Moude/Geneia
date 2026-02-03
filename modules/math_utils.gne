@@ -1,0 +1,20 @@
+! Geneia Regular Extension - Math Utilities !
+! File: math_utils.gne !
+
+"Math utilities module for Geneia"
+
+! Variables !
+str {module_name} = 'Math Utils'
+str {version} = '1.0.0'
+hold (pi_digits) = (3)
+
+! Functions !
+func calculate_area
+func calculate_volume
+
+! Export for use in other files !
+export module_name
+export version
+export calculate_area
+
+peat 'Math Utils module loaded'

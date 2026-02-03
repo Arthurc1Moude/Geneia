@@ -1,0 +1,47 @@
+{
+  "name": "geneia-language",
+  "displayName": "Geneia Language Support",
+  "description": "Syntax highlighting and language support for Geneia programming language",
+  "version": "1.0.0",
+  "publisher": "moude-ai",
+  "author": {
+    "name": "Moude AI Inc.",
+    "url": "https://moude.ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moude-ai/geneia"
+  },
+  "homepage": "https://geneia.dev",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "geneia",
+    "gn",
+    "programming language",
+    "moude"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "geneia",
+        "aliases": ["Geneia", "geneia", "gn"],
+        "extensions": [".gn"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "geneia",
+        "scopeName": "source.geneia",
+        "path": "./geneia.tmLanguage.json"
+      }
+    ]
+  }
+}

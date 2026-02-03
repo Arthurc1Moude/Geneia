@@ -1,0 +1,9 @@
+show "Using show (normal print):"
+show "Hello World"
+
+peat "Using peat (print+repeat):"
+peat "This is peat!"
+
+str msg = repeat "Go" 3 && exit 0
+
+peat "Won't show after exit"

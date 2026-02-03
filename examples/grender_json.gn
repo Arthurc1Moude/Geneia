@@ -1,0 +1,20 @@
+! ================================================ !
+! G_Render - JSON Output Demo                      !
+! Renders UI to JSON format for APIs               !
+! ================================================ !
+
+import G_Render
+
+.GR.target 'json'
+.GR.title 'JSON App'
+.GR.theme 'dark'
+
+.GR.view 'main'
+.GR.nav 'Home' 'About'
+.GR.hero 'Welcome' 'JSON output demo'
+.GR.text 'This renders to JSON format.'
+.GR.card 'Card 1' 'Card content'
+.GR.list 'Item 1' 'Item 2'
+.GR.btn 'Click' 'action()'
+.GR.endview
+.GR.render

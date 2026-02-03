@@ -1,0 +1,20 @@
+! Function Test !
+
+"Testing functions"
+
+func greet {
+    peat 'Hello from function!'
+    peat 'Welcome to Geneia'
+}
+
+func farewell {
+    peat 'Goodbye!'
+}
+
+greet
+
+peat '---'
+
+farewell
+
+exit (0)

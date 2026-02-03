@@ -1,0 +1,10 @@
+// Geneia UI Script - Real Window
+WINDOW|Geneia Real Application|600|400
+LABEL|lbl_title|Welcome to Geneia!|50|20|500|40
+BUTTON|btn_hello|Say Hello|50|80|150|40
+BUTTON|btn_exit|Exit|220|80|150|40
+TEXTBOX|txt_input|50|140|320|30
+LABEL|lbl_input|Enter your name:|50|110|200|25
+LISTBOX|lst_items|50|190|320|120
+CHECKBOX|chk_option1|Enable Feature 1|50|330|200|25
+CHECKBOX|chk_option2|Enable Feature 2|260|330|200|25

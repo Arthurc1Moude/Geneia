@@ -1,0 +1,24 @@
+! This is a comment !
+! Comments use exclamation marks !
+
+peat 'Hello World'
+
+str {name} = 'Geneia'
+peat {name}
+
+"Running tip: This is a tip message"
+
+hold (count) = (5)
+peat 'Echo message here'
+
+repeat 'Repeated message' & t.s = (3)
+
+! Another comment block !
+! Multiple lines of comments !
+
+turn (2) {
+    peat 'Echo in turn block'
+    "Tip: Turn blocks are powerful"
+}
+
+str msg = 'Go Go Go' && exit (0)

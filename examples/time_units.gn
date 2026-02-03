@@ -1,0 +1,12 @@
+show "Time units demo"
+
+repeat 5 & ts
+show "Repeated with time unit"
+
+turn 3 {
+    show "Turn block 3 times"
+}
+
+str msg = repeat "Hi" 2 && exit 0
+
+show "Won't show"

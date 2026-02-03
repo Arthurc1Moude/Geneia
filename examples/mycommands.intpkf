@@ -1,0 +1,38 @@
+INTPKF
+1.0
+10
+[build_project]
+make clean
+make all
+echo "Build complete!"
+[/]
+[clean_temp]
+rm -rf /tmp/geneia_*
+echo "Temp files cleaned"
+[/]
+[disk_usage]
+df -h
+[/]
+[hello]
+echo "Hello from INT!"
+[/]
+[list_files]
+ls -la
+[/]
+[memory_info]
+free -h
+[/]
+[network_status]
+ip addr show
+[/]
+[run_tests]
+./geneia examples/hello.gn
+./geneia examples/int_demo.gn
+echo "Tests complete!"
+[/]
+[show_date]
+date
+[/]
+[system_info]
+uname -a
+[/]

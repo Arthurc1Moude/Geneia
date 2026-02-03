@@ -1,0 +1,167 @@
+! ================================================ !
+! GENEIA FULL DEMONSTRATION - All Functions        !
+! ================================================ !
+
+"Complete Geneia Programming Language Demo"
+
+! ================================================ !
+! MODULE IMPORTS                                   !
+! ================================================ !
+
+import UI
+import Math
+import Graphics
+import Network
+import File
+
+"All modules imported successfully"
+
+! ================================================ !
+! VARIABLES - All Types                            !
+! ================================================ !
+
+str {app_name} = 'Geneia Full Demo'
+str {author} = 'Developer'
+str {version} = '2.0.0'
+
+hold (iterations) = (5)
+hold (width) = (1920)
+hold (height) = (1080)
+
+! ================================================ !
+! OUTPUT                                           !
+! ================================================ !
+
+peat '================================================'
+peat 'GENEIA PROGRAMMING LANGUAGE'
+peat 'Full Feature Demonstration'
+peat '================================================'
+peat ''
+
+peat 'Application: '
+peat {app_name}
+peat 'Version: '
+peat {version}
+peat 'Author: '
+peat {author}
+peat ''
+
+! ================================================ !
+! LOOPS - All Time Units                           !
+! ================================================ !
+
+peat 'LOOP DEMONSTRATIONS:'
+peat ''
+
+peat 'Repeat with t.s (seconds):'
+repeat 'Processing...' & t.s = (3)
+peat ''
+
+peat 'Repeat with t.ms (milliseconds):'
+repeat 'Fast!' & t.ms = (5)
+peat ''
+
+! ================================================ !
+! TURN BLOCKS                                      !
+! ================================================ !
+
+peat 'TURN BLOCK DEMONSTRATION:'
+peat ''
+
+turn (3) {
+    peat '  Turn iteration'
+    peat '  Multiple statements'
+    peat '  All lines execute'
+}
+
+peat ''
+
+! ================================================ !
+! NESTED OPERATIONS                                !
+! ================================================ !
+
+peat 'NESTED OPERATIONS:'
+peat ''
+
+turn (2) {
+    peat '  Outer block'
+    repeat '    Inner repeat' & t.s = (2)
+}
+
+peat ''
+
+! ================================================ !
+! MODULE FUNCTIONS                                 !
+! ================================================ !
+
+peat 'MODULE FUNCTIONALITY:'
+peat ''
+
+peat 'UI Module - Functions:'
+peat '  ui.window, ui.button, ui.label, ui.textbox'
+peat ''
+
+peat 'Math Module - Functions:'
+peat '  math.sqrt, math.pow, math.sin, math.cos'
+peat ''
+
+peat 'Graphics Module - Functions:'
+peat '  gfx.draw, gfx.circle, gfx.rect, gfx.line'
+peat ''
+
+peat 'Network Module - Functions:'
+peat '  net.http, net.socket, net.connect'
+peat ''
+
+peat 'File Module - Functions:'
+peat '  file.read, file.write, file.open, file.close'
+peat ''
+
+! ================================================ !
+! EXPORT DEMONSTRATION                             !
+! ================================================ !
+
+peat 'EXPORT DEMONSTRATION:'
+peat ''
+
+str {export_var} = 'Exportable'
+hold (export_num) = (42)
+
+export export_var
+export export_num
+
+peat ''
+
+! ================================================ !
+! TIPS                                             !
+! ================================================ !
+
+"Use import to load modules"
+"Use export to create reusable modules"
+"Time units: t.s, t.ms, t.m, t.h, t.d"
+"Quote types: {}, '', \"\", !...!, ()"
+
+! ================================================ !
+! SUMMARY                                          !
+! ================================================ !
+
+peat ''
+peat '================================================'
+peat 'DEMONSTRATION COMPLETE!'
+peat '================================================'
+peat ''
+
+peat 'Features Demonstrated:'
+peat '  ✓ Module imports (UI, Math, Graphics, Network, File)'
+peat '  ✓ Variables (str, hold)'
+peat '  ✓ Output (peat)'
+peat '  ✓ Loops (repeat, turn)'
+peat '  ✓ Time units (t.s, t.ms)'
+peat '  ✓ Nested operations'
+peat '  ✓ Export functionality'
+peat '  ✓ All quote types'
+peat ''
+
+"Thank you for using Geneia!"
+
+exit (0)

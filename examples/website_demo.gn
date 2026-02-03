@@ -1,0 +1,46 @@
+! G_Web.Kit Demo - Geneia Web Kit !
+
+"Build websites with Geneia using G_Web.Kit"
+
+import G_Web.Kit
+
+! Create page !
+.GWeb.page 'My Geneia Portfolio'
+
+! Set styles !
+.GWeb.style 'bg' '#0a0a1a'
+.GWeb.style 'text' '#e0e0e0'
+.GWeb.style 'accent' '#00d4ff'
+.GWeb.style 'font' 'Inter, sans-serif'
+
+! Navigation !
+.GWeb.nav 'Home' 'Projects' 'Skills' 'Contact'
+
+! Hero section !
+.GWeb.hero 'Welcome to Geneia' 'Create amazing websites without HTML'
+
+! About section !
+.GWeb.sect 'About Geneia'
+.GWeb.text 'Geneia is a modern programming language designed for simplicity.'
+.GWeb.text 'With G_Web.Kit, you can build beautiful websites using Geneia syntax.'
+.GWeb.btn 'Learn More' '#learn'
+
+! Features section !
+.GWeb.sect 'Features'
+.GWeb.grid (3)
+.GWeb.card 'Simple Syntax' 'Write websites with clean Geneia code'
+.GWeb.card 'No HTML Needed' 'G_Web.Kit generates everything for you'
+.GWeb.card 'OpenGSL Ready' 'Combine with OpenGSL for graphics'
+.GWeb.endgrid
+
+! Skills section !
+.GWeb.sect 'What You Can Build'
+.GWeb.list 'Portfolio Sites' 'Landing Pages' 'Documentation' 'Web Apps'
+
+! Footer !
+.GWeb.foot 'Made with Geneia G_Web.Kit - 2024'
+
+! Build the website !
+.GWeb.build
+
+exit (0)

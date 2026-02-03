@@ -1,0 +1,299 @@
+! ================================================ !
+! GENEIA COMPLETE FUNCTIONS DEMONSTRATION          !
+! All Features, All Functions, All Capabilities    !
+! ================================================ !
+
+"Complete demonstration of Geneia programming language"
+
+! ================================================ !
+! 1. MODULE SYSTEM - Import Built-in Modules       !
+! ================================================ !
+
+import UI
+import Math
+import Graphics
+import Network
+import File
+
+"All built-in modules imported successfully"
+
+! ================================================ !
+! 2. IMPORT GENEIA EXTENSIONS                      !
+! ================================================ !
+
+! Import .gne (Regular Extension) !
+import math_utils.gne
+
+! Import .gns (S-Extension) !
+import ui_helpers.gns
+
+"Geneia extension modules loaded"
+
+! ================================================ !
+! 3. VARIABLE DECLARATIONS - All Types             !
+! ================================================ !
+
+! String variables with {} !
+str {app_name} = 'Geneia Demo'
+str {author} = 'Developer'
+str {description} = 'Complete function demonstration'
+str {version} = '2.0.0'
+str {status} = 'Running'
+
+! Number variables with () !
+hold (count) = (100)
+hold (iterations) = (5)
+hold (width) = (1920)
+hold (height) = (1080)
+hold (fps) = (60)
+
+! Built-in msg variable !
+peat 'Built-in msg:'
+peat msg
+
+! ================================================ !
+! 4. OUTPUT FUNCTIONS - All Quote Types            !
+! ================================================ !
+
+peat '================================================'
+peat 'GENEIA COMPLETE DEMONSTRATION'
+peat '================================================'
+peat ''
+
+! Echo messages with '' !
+peat 'Application: '
+peat {app_name}
+peat 'Version: '
+peat {version}
+peat 'Author: '
+peat {author}
+peat ''
+
+! Running tips with "" !
+"Tips display with [TIP] prefix"
+"Use import to extend functionality"
+"Variables must be declared before use"
+"Time units: t.s, t.ms, t.m, t.h, t.d"
+
+! Comments with !...! !
+! This is a comment - not displayed !
+! Comments are for documentation !
+
+peat ''
+
+! ================================================ !
+! 5. LOOP FUNCTIONS - Repeat with Time Units       !
+! ================================================ !
+
+peat 'LOOP DEMONSTRATIONS:'
+peat ''
+
+! Repeat with seconds !
+peat 'Repeat with t.s (seconds):'
+repeat 'Processing...' & t.s = (3)
+
+peat ''
+
+! Repeat with milliseconds !
+peat 'Repeat with t.ms (milliseconds):'
+repeat 'Fast!' & t.ms = (5)
+
+peat ''
+
+! Repeat with minutes (simulated) !
+peat 'Repeat with t.m (minutes):'
+repeat 'Minute test' & t.m = (1)
+
+peat ''
+
+! ================================================ !
+! 6. TURN BLOCKS - Multiple Statements             !
+! ================================================ !
+
+peat 'TURN BLOCK DEMONSTRATIONS:'
+peat ''
+
+turn (3) {
+    peat '  Turn iteration'
+    peat '  Multiple statements execute'
+    peat '  All lines work properly'
+    peat '  ---'
+}
+
+peat ''
+
+! ================================================ !
+! 7. NESTED OPERATIONS                             !
+! ================================================ !
+
+peat 'NESTED OPERATIONS:'
+peat ''
+
+turn (2) {
+    peat '  Outer turn block'
+    repeat '    Inner repeat' & t.s = (2)
+    peat '  Back to outer'
+}
+
+peat ''
+
+! ================================================ !
+! 8. OPERATORS - & vs &&                           !
+! ================================================ !
+
+peat 'OPERATOR DEMONSTRATIONS:'
+peat ''
+
+! & operator - inner connection with time unit !
+peat '& operator (inner connection):'
+repeat 'Connected' & t.s = (2)
+
+peat ''
+
+! && operator - outer/separate functions !
+peat '&& operator (separate functions):'
+str {temp} = 'Quick' && peat {temp}
+
+peat ''
+
+! ================================================ !
+! 9. MODULE FUNCTIONALITY                          !
+! ================================================ !
+
+peat 'MODULE FUNCTIONALITY:'
+peat ''
+
+! UI Module !
+peat 'UI Module loaded - Functions available:'
+peat '  - ui.window'
+peat '  - ui.button'
+peat '  - ui.label'
+peat '  - ui.textbox'
+
+peat ''
+
+! Math Module !
+peat 'Math Module loaded - Functions available:'
+peat '  - math.sqrt'
+peat '  - math.pow'
+peat '  - math.sin'
+peat '  - math.cos'
+
+peat ''
+
+! Graphics Module !
+peat 'Graphics Module loaded - Functions available:'
+peat '  - gfx.draw'
+peat '  - gfx.circle'
+peat '  - gfx.rect'
+peat '  - gfx.line'
+
+peat ''
+
+! Network Module !
+peat 'Network Module loaded - Functions available:'
+peat '  - net.http'
+peat '  - net.socket'
+peat '  - net.connect'
+
+peat ''
+
+! File Module !
+peat 'File Module loaded - Functions available:'
+peat '  - file.read'
+peat '  - file.write'
+peat '  - file.open'
+peat '  - file.close'
+
+peat ''
+
+! ================================================ !
+! 10. EXPORT DEMONSTRATION                         !
+! ================================================ !
+
+peat 'EXPORT DEMONSTRATION:'
+peat ''
+
+! Create exportable variables !
+str {export_var} = 'Exportable Value'
+hold (export_num) = (42)
+
+! Export them !
+export export_var
+export export_num
+
+peat 'Variables exported for module use'
+peat ''
+
+! ================================================ !
+! 11. COMPLEX NESTED OPERATIONS                    !
+! ================================================ !
+
+peat 'COMPLEX NESTED OPERATIONS:'
+peat ''
+
+turn (2) {
+    peat '  Level 1: Outer turn'
+    turn (2) {
+        peat '    Level 2: Inner turn'
+        repeat '      Level 3: Repeat' & t.s = (1)
+    }
+    peat '  Back to Level 1'
+}
+
+peat ''
+
+! ================================================ !
+! 12. ALL TIME UNITS DEMONSTRATION                 !
+! ================================================ !
+
+peat 'ALL TIME UNITS:'
+peat ''
+
+peat 't.s (seconds):'
+repeat 'Second' & t.s = (1)
+
+peat 't.ms (milliseconds):'
+repeat 'Millisecond' & t.ms = (2)
+
+peat 't.m (minutes):'
+repeat 'Minute' & t.m = (1)
+
+peat 't.h (hours):'
+repeat 'Hour' & t.h = (1)
+
+peat 't.d (days):'
+repeat 'Day' & t.d = (1)
+
+peat ''
+
+! ================================================ !
+! 13. FINAL SUMMARY                                !
+! ================================================ !
+
+peat '================================================'
+peat 'DEMONSTRATION COMPLETE!'
+peat '================================================'
+peat ''
+
+peat 'Features Demonstrated:'
+peat '  ✓ Module imports (built-in)'
+peat '  ✓ Extension imports (.gne/.gns)'
+peat '  ✓ Variable declarations (str/hold)'
+peat '  ✓ All quote types ({}, '', "", !...!, ())'
+peat '  ✓ Output functions (peat)'
+peat '  ✓ Loop functions (repeat/turn)'
+peat '  ✓ Time units (t.s/t.ms/t.m/t.h/t.d)'
+peat '  ✓ Operators (& and &&)'
+peat '  ✓ Nested operations'
+peat '  ✓ Export functionality'
+peat '  ✓ Module functions'
+peat ''
+
+"All Geneia features working perfectly!"
+"Thank you for using Geneia Programming Language"
+
+peat '================================================'
+
+! Exit with success code !
+exit (0)

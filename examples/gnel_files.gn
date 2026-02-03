@@ -1,0 +1,43 @@
+! ================================================ !
+! OpenGNEL File Operations Demo                    !
+! ================================================ !
+
+import OpenGNEL
+
+"File Operations with OpenGNEL"
+
+! Create a test file
+.GNEL.touch 'test_file.txt'
+
+! Write to file using echo and redirect
+.GNEL.run 'echo "Hello from OpenGNEL" > test_file.txt'
+.GNEL.run 'echo "Line 2" >> test_file.txt'
+.GNEL.run 'echo "Line 3" >> test_file.txt'
+
+! Show file content
+peat 'File content:'
+.GNEL.cat 'test_file.txt'
+ 
+! Word count
+peat 'Word count:'
+.GNEL.wc 'test_file.txt'
+
+! Head of file
+peat 'First 2 lines:'
+.GNEL.head 'test_file.txt' (2)
+
+! Grep for pattern
+peat 'Lines with "Line":'
+.GNEL.grep 'Line' 'test_file.txt'
+
+! Copy file
+.GNEL.cp 'test_file.txt' 'test_copy.txt'
+
+! List to verify
+.GNEL.run 'ls -la test*.txt'
+
+! Clean up
+.GNEL.rm 'test_file.txt'
+.GNEL.rm 'test_copy.txt'
+
+peat 'File operations complete!'

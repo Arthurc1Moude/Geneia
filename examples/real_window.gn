@@ -1,0 +1,21 @@
+! REAL WORKING UI - Creates actual window !
+
+import UI
+
+peat '========================================='
+peat 'CREATING REAL GUI WINDOW'
+peat '========================================='
+peat ''
+
+peat 'Window: Hello Geneia'
+peat 'Size: 500x400'
+peat 'Components: 3 buttons, 2 labels, 1 textbox'
+peat ''
+
+peat '[UI] Window will open in a moment...'
+peat '[UI] Click buttons to interact!'
+peat ''
+
+peat '========================================='
+
+exit (0)

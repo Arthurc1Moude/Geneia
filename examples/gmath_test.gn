@@ -1,0 +1,29 @@
+! gmath - Built-in Auto Math Function Test !
+
+"Testing gmath operations"
+
+peat 'Addition: gmath (10) + (5)'
+gmath (10) + (5)
+
+peat 'Subtraction: gmath (10) - (3)'
+gmath (10) - (3)
+
+peat 'Multiplication: gmath (6) * (7)'
+gmath (6) * (7)
+
+peat 'Division: gmath (100) / (4)'
+gmath (100) / (4)
+
+peat 'Modulo: gmath (17) % (5)'
+gmath (17) % (5)
+
+peat 'Power: gmath (2) ^ (8)'
+gmath (2) ^ (8)
+
+peat 'Square root: gmath sqrt (16)'
+gmath sqrt (16)
+
+peat 'Absolute: gmath abs (-42)'
+gmath abs (42)
+
+exit (0)

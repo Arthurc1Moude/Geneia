@@ -1,0 +1,6 @@
+! Test running .intpkf package !
+
+peat 'Running INT package...'
+int run 'examples/mycommands.intpkf'
+
+peat 'Package execution complete!'

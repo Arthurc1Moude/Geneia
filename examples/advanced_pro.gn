@@ -1,0 +1,18 @@
+show "Advanced Pro Features Demo"
+
+str title as "Geneia Language"
+show title
+
+hold version as 2.0
+show version
+
+repeat 5
+show "Premium loop"
+
+str message as "Professional"
+show message
+
+hold power as 9000
+show power
+
+exit 0

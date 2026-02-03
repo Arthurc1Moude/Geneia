@@ -1,0 +1,40 @@
+! 3D Apple with OpenGSL !
+
+"A beautiful 3D apple rendered with OpenGSL"
+
+import OpenGSL
+
+! Create canvas with dark background !
+.OpenGSL.canvas '3D Apple - OpenGSL' (800) (600)
+.OpenGSL.bg '#1a1a2e'
+
+! Draw a big red apple in the center !
+! Syntax: .OpenGSL.shape.d3 (x) (y) (z) & shape.n = name !
+! Then: .OpenGSL.shape.apple -u (size) 'color' !
+.OpenGSL.shape.d3 (400) (320) (0) & shape.n = mainApple
+.OpenGSL.shape.apple -u (120) '#FF2020'
+
+! Draw smaller apples around !
+.OpenGSL.shape.d3 (150) (250) (0) & shape.n = redApple
+.OpenGSL.shape.apple -u (70) '#FF4040'
+
+.OpenGSL.shape.d3 (650) (250) (0) & shape.n = greenApple
+.OpenGSL.shape.apple -u (70) '#00CC00'
+
+.OpenGSL.shape.d3 (250) (480) (0) & shape.n = goldApple
+.OpenGSL.shape.apple -u (60) '#FFD700'
+
+.OpenGSL.shape.d3 (550) (480) (0) & shape.n = orangeApple
+.OpenGSL.shape.apple -u (60) '#FF6600'
+
+! Title text !
+.OpenGSL.shape.d2 (280) (50) & shape.n = title
+.OpenGSL.shape.text -u '3D Apple Gallery' '#FFFFFF'
+
+.OpenGSL.shape.d2 (250) (570) & shape.n = footer
+.OpenGSL.shape.text -u 'Made with Geneia OpenGSL' '#AAAAAA'
+
+! Render the scene !
+.OpenGSL.render
+
+exit (0)

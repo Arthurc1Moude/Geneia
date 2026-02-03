@@ -1,0 +1,11 @@
+show "Operator demo"
+
+hold x as 10
+repeat 3 & ms
+show x
+
+turn 2 {
+    peat "Inner function"
+}
+
+str a = repeat "Go" 3 && exit 0

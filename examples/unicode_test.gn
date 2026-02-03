@@ -1,0 +1,11 @@
+! Unicode Strings Test !
+
+"Testing Unicode str(U+XXXX) function"
+
+str(U+0041)
+str(U+00A9)
+str(U+2764)
+
+peat 'Done!'
+
+exit (0)

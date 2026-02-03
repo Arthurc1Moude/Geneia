@@ -1,0 +1,89 @@
+! Geneia Program that Creates Real GUI !
+
+import UI
+
+peat '================================================'
+peat 'GENEIA GUI CREATOR'
+peat '================================================'
+peat ''
+peat 'This Geneia program will create a real GUI window!'
+peat ''
+
+! Define window !
+str {window_title} = 'Geneia Created This Window'
+hold (window_width) = (600)
+hold (window_height) = (400)
+
+peat 'Creating window...'
+peat '  Title: Geneia Created This Window'
+peat '  Size: 600x400'
+peat ''
+
+! Define button 1 !
+str {btn1_name} = 'btn_hello'
+str {btn1_text} = 'Hello from Geneia!'
+hold (btn1_x) = (50)
+hold (btn1_y) = (80)
+hold (btn1_w) = (200)
+hold (btn1_h) = (40)
+
+peat 'Creating button 1...'
+peat '  Text: Hello from Geneia!'
+peat '  Position: (50, 80)'
+peat ''
+
+! Define button 2 !
+str {btn2_name} = 'btn_geneia'
+str {btn2_text} = 'Geneia Rocks!'
+hold (btn2_x) = (270)
+hold (btn2_y) = (80)
+hold (btn2_w) = (200)
+hold (btn2_h) = (40)
+
+peat 'Creating button 2...'
+peat '  Text: Geneia Rocks!'
+peat '  Position: (270, 80)'
+peat ''
+
+! Define label !
+str {lbl_name} = 'lbl_title'
+str {lbl_text} = 'This GUI was created by Geneia Programming Language!'
+hold (lbl_x) = (50)
+hold (lbl_y) = (20)
+hold (lbl_w) = (500)
+hold (lbl_h) = (40)
+
+peat 'Creating label...'
+peat '  Text: This GUI was created by Geneia!'
+peat ''
+
+! Define textbox !
+str {txt_name} = 'txt_input'
+hold (txt_x) = (50)
+hold (txt_y) = (150)
+hold (txt_w) = (420)
+hold (txt_h) = (30)
+
+peat 'Creating textbox...'
+peat '  Position: (50, 150)'
+peat ''
+
+! Define checkbox !
+str {chk_name} = 'chk_geneia'
+str {chk_text} = 'I love Geneia!'
+hold (chk_x) = (50)
+hold (chk_y) = (200)
+hold (chk_w) = (200)
+hold (chk_h) = (30)
+
+peat 'Creating checkbox...'
+peat '  Text: I love Geneia!'
+peat ''
+
+peat '================================================'
+peat 'GUI DEFINITION COMPLETE!'
+peat '================================================'
+peat ''
+peat 'Now generating UI script file...'
+
+exit (0)

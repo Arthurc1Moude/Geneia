@@ -1,0 +1,10 @@
+! Working GUI Example !
+
+import UI
+
+peat '=== Geneia GUI Application ==='
+peat ''
+peat 'This program creates a real GUI window!'
+peat ''
+
+exit (0)

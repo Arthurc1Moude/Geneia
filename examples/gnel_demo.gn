@@ -1,0 +1,42 @@
+! ================================================ !
+! OpenGNEL Demo - Command Line Scripting           !
+! Geneia Element LanScript for shell commands      !
+! ================================================ !
+
+import OpenGNEL
+
+"OpenGNEL - Command Line Scripting Demo"
+
+! Show current directory
+peat 'Current directory:'
+.GNEL.pwd
+
+! List files
+peat 'Files in current directory:'
+.GNEL.ls
+
+! Create an alias
+.GNEL.alias 'll' 'ls -la'
+
+! Set environment variable
+.GNEL.env 'MY_VAR' 'Hello from Geneia'
+
+! Get environment variable
+.GNEL.getenv 'MY_VAR'
+
+! Echo text
+.GNEL.echo 'This is OpenGNEL!'
+
+! Run a command
+.GNEL.run 'echo "Running shell command"'
+
+! Pipe commands
+.GNEL.pipe 'echo hello world' 'wc -w'
+
+! Show command history
+.GNEL.hist
+
+! Show aliases
+.GNEL.alias
+
+peat 'OpenGNEL demo complete!'

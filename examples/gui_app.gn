@@ -1,0 +1,47 @@
+! Real GUI Application in Geneia !
+
+import UI
+
+peat 'Creating GUI application...'
+peat ''
+
+! This will generate a real GUI window !
+str {app_title} = 'My Geneia App'
+hold (app_width) = (500)
+hold (app_height) = (400)
+
+peat 'Window: '
+peat {app_title}
+peat 'Size: 500x400'
+peat ''
+
+! Button !
+str {btn_text} = 'Click Me!'
+hold (btn_x) = (150)
+hold (btn_y) = (100)
+hold (btn_w) = (200)
+hold (btn_h) = (50)
+
+peat 'Button: Click Me! at (150, 100)'
+peat ''
+
+! Label !
+str {lbl_text} = 'Welcome to Geneia GUI!'
+hold (lbl_x) = (100)
+hold (lbl_y) = (50)
+
+peat 'Label: Welcome to Geneia GUI!'
+peat ''
+
+! Input !
+hold (txt_x) = (100)
+hold (txt_y) = (170)
+hold (txt_w) = (300)
+
+peat 'TextBox at (100, 170)'
+peat ''
+
+peat 'GUI components defined!'
+peat 'Launching UI...'
+
+exit (0)

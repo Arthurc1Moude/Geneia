@@ -1,0 +1,5 @@
+export { SearchPanel } from './SearchPanel'
+export { GitPanel } from './GitPanel'
+export { RunPanel } from './RunPanel'
+export { ExtensionsPanel } from './ExtensionsPanel'
+export { AccountPanel } from './AccountPanel'

@@ -1,0 +1,79 @@
+! 3D Pizza built with OpenGSL shapes !
+
+"3D Pizza made from cylinders and spheres"
+
+import OpenGSL
+
+.OpenGSL.canvas '3D Pizza - OpenGSL' (800) (600)
+.OpenGSL.bg '#1a1a2e'
+
+! Pizza base - flat cylinder for crust !
+.OpenGSL.shape.d3 (400) (320) (0) & shape.n = crustBase
+.OpenGSL.shape.cylinder -u (150) (15) '#D4A574'
+
+! Pizza sauce layer - slightly smaller cylinder !
+.OpenGSL.shape.d3 (400) (320) (5) & shape.n = sauceLayer
+.OpenGSL.shape.cylinder -u (135) (8) '#CC2200'
+
+! Cheese layer - yellow cylinder on top !
+.OpenGSL.shape.d3 (400) (320) (10) & shape.n = cheeseLayer
+.OpenGSL.shape.cylinder -u (130) (6) '#FFD700'
+
+! Pepperoni - spread around the pizza !
+.OpenGSL.shape.d3 (340) (260) (15) & shape.n = pepperoni1
+.OpenGSL.shape.sphere -u (18) '#8B0000'
+
+.OpenGSL.shape.d3 (460) (260) (15) & shape.n = pepperoni2
+.OpenGSL.shape.sphere -u (18) '#8B0000'
+
+.OpenGSL.shape.d3 (300) (320) (15) & shape.n = pepperoni3
+.OpenGSL.shape.sphere -u (18) '#8B0000'
+
+.OpenGSL.shape.d3 (500) (320) (15) & shape.n = pepperoni4
+.OpenGSL.shape.sphere -u (18) '#8B0000'
+
+.OpenGSL.shape.d3 (340) (380) (15) & shape.n = pepperoni5
+.OpenGSL.shape.sphere -u (18) '#8B0000'
+
+.OpenGSL.shape.d3 (460) (380) (15) & shape.n = pepperoni6
+.OpenGSL.shape.sphere -u (18) '#8B0000'
+
+.OpenGSL.shape.d3 (400) (280) (15) & shape.n = pepperoni7
+.OpenGSL.shape.sphere -u (18) '#8B0000'
+
+.OpenGSL.shape.d3 (400) (360) (15) & shape.n = pepperoni8
+.OpenGSL.shape.sphere -u (18) '#8B0000'
+
+! Green peppers - spread between pepperoni !
+.OpenGSL.shape.d3 (370) (300) (15) & shape.n = greenPepper1
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+.OpenGSL.shape.d3 (430) (300) (15) & shape.n = greenPepper2
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+.OpenGSL.shape.d3 (370) (340) (15) & shape.n = greenPepper3
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+.OpenGSL.shape.d3 (430) (340) (15) & shape.n = greenPepper4
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+! Olives - in the gaps !
+.OpenGSL.shape.d3 (400) (320) (15) & shape.n = olive1
+.OpenGSL.shape.sphere -u (8) '#1a1a1a'
+
+.OpenGSL.shape.d3 (320) (290) (15) & shape.n = olive2
+.OpenGSL.shape.sphere -u (8) '#1a1a1a'
+
+.OpenGSL.shape.d3 (480) (350) (15) & shape.n = olive3
+.OpenGSL.shape.sphere -u (8) '#1a1a1a'
+
+! Title !
+.OpenGSL.shape.d2 (280) (50) & shape.n = title
+.OpenGSL.shape.text -u '3D Pizza with OpenGSL' '#FFFFFF'
+
+.OpenGSL.shape.d2 (250) (550) & shape.n = footer
+.OpenGSL.shape.text -u 'Built from cylinders and spheres' '#AAAAAA'
+
+.OpenGSL.render
+
+exit (0)

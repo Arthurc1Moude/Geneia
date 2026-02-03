@@ -1,0 +1,66 @@
+! G_Web.Kit Full Demo - All Features !
+
+"Complete G_Web.Kit demonstration"
+
+import G_Web.Kit
+
+! Create page !
+.GWeb.page 'Geneia G_Web.Kit Demo'
+
+! Set styles !
+.GWeb.style 'bg' '#0f0f1a'
+.GWeb.style 'text' '#f0f0f0'
+.GWeb.style 'accent' '#7c3aed'
+.GWeb.style 'font' 'system-ui, sans-serif'
+
+! Navigation !
+.GWeb.nav 'Home' 'Features' 'Docs' 'Contact'
+
+! Hero section !
+.GWeb.hero 'G_Web.Kit' 'Build websites with Geneia - No HTML needed'
+
+! Features section !
+.GWeb.sect 'Features'
+.GWeb.grid (3)
+.GWeb.card 'Simple Syntax' 'Write clean Geneia code to create websites'
+.GWeb.card 'Responsive' 'Mobile-friendly layouts out of the box'
+.GWeb.card 'Customizable' 'Full control over colors and fonts'
+.GWeb.endgrid
+.GWeb.endsec
+
+! Elements demo !
+.GWeb.sect 'Available Elements'
+.GWeb.text 'G_Web.Kit provides many elements for building websites:'
+.GWeb.list 'Navigation bars' 'Hero sections' 'Cards and grids' 'Forms and inputs' 'Buttons and links' 'Images and videos'
+.GWeb.hr
+.GWeb.endsec
+
+! Form demo !
+.GWeb.sect 'Contact Form'
+.GWeb.form '#submit'
+.GWeb.input 'Your name' 'text'
+.GWeb.input 'Your email' 'email'
+.GWeb.input 'Your message' 'text'
+.GWeb.btn 'Send Message' '#'
+.GWeb.endform
+.GWeb.endsec
+
+.GWeb.space (40)
+
+! Links demo !
+.GWeb.sect 'Links'
+.GWeb.text 'Check out these resources:'
+.GWeb.link 'Geneia Documentation' '/docs'
+.GWeb.br
+.GWeb.link 'OpenGSL Graphics' '/opengsl'
+.GWeb.br
+.GWeb.link 'GitHub Repository' 'https://github.com'
+.GWeb.endsec
+
+! Footer !
+.GWeb.foot 'Built with Geneia G_Web.Kit - 2024'
+
+! Build the website !
+.GWeb.build
+
+exit (0)

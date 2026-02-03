@@ -1,0 +1,15 @@
+! Variables Demo in Geneia !
+
+"Demonstrating variables"
+
+var {name} = 'Alice'
+var {language} = 'Geneia'
+hold (age) = (25)
+hold (score) = (98)
+
+peat 'Name: '
+peat {name}
+peat 'Language: '
+peat {language}
+
+exit (0)

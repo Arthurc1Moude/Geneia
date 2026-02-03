@@ -1,0 +1,90 @@
+! New Functions Demo !
+
+"Testing String functions with flags"
+
+str -u 'hello world'
+str -l 'HELLO WORLD'
+str -t '  spaces  '
+str -r 'geneia'
+
+str --upper 'test upper'
+str --lower 'TEST LOWER'
+str --trim '  test  '
+str --rev 'test'
+
+"Testing String functions (Module syntax)"
+
+.String.upper 'module hello'
+.String.lower 'MODULE HELLO'
+.String.sub 'hello world' (0) (5)
+.String.rep 'ab' (3)
+.String.has 'hello' 'ell'
+.String.idx 'hello' 'l'
+.String.split 'a,b,c' ','
+
+"Testing Time functions with flags"
+
+time -n
+time -u
+time -y
+time -m
+time -d
+time -h
+
+time --now
+time --unix
+time --year
+
+"Testing Time functions (Module syntax)"
+
+.Time.now
+.Time.unix
+.Time.min
+.Time.sec
+
+"Testing System functions with flags"
+
+sys -o
+sys -a
+
+sys --os
+sys --arch
+
+"Testing System functions (Module syntax)"
+
+.Sys.os
+.Sys.arch
+
+"Testing Math functions with flags"
+
+gmath -s (16)
+gmath -a (5)
+gmath -f (3.7)
+gmath -i (3.2)
+gmath -r (3.5)
+gmath -p
+gmath -E
+
+gmath --sqrt (25)
+gmath --floor (4.9)
+gmath --pi
+
+"Testing Math functions (Module syntax)"
+
+.Math.tan (0.5)
+.Math.log (10)
+.Math.log10 (100)
+.Math.exp (1)
+.Math.min (5) (3)
+.Math.max (5) (3)
+.Math.mod (10) (3)
+.Math.e
+.Math.pi
+
+"Testing Array functions"
+
+.Array.join 'a' 'b' 'c' '-'
+
+peat 'All new functions tested!'
+
+exit (0)

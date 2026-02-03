@@ -1,0 +1,29 @@
+! INT Inc. Command System Demo !
+! .intcnf - Config files for custom terminal commands !
+! .intpkf - Packaged/compiled command files !
+
+! Define custom commands inline !
+int cmd 'hello' {
+    peat 'Hello from INT command!'
+}
+
+int cmd 'greet' {
+    peat 'Welcome to INT Inc. Terminal!'
+    peat 'Custom commands made easy.'
+}
+
+! List all defined commands !
+int list
+
+! Execute a command !
+int exec 'hello'
+int exec 'greet'
+
+! Load commands from .intcnf file !
+! int load 'mycommands.intcnf' !
+
+! Package commands to .intpkf !
+! int pack 'mycommands.intcnf' !
+
+! Run packaged commands !
+! int run 'mycommands.intpkf' !

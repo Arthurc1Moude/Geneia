@@ -1,0 +1,15 @@
+! Final Geneia Test !
+
+import UI
+import Math
+
+str {name} = 'Geneia'
+peat {name}
+
+repeat 'Test' & t.s = (2)
+
+turn (1) {
+    peat 'Success!'
+}
+
+exit (0)

@@ -1,0 +1,61 @@
+# Nano syntax highlighting for Geneia
+syntax "geneia" "\.gn$"
+
+# Comments
+color cyan "!.*!"
+
+# Tips (double quotes)
+color yellow "\"[^\"]*\""
+
+# Strings (single quotes)
+color green "'[^']*'"
+
+# Variables (braces)
+color magenta "\{[^}]*\}"
+
+# Module functions
+color brightblue "\.[A-Z][a-zA-Z]*\.[a-zA-Z]+"
+
+# Module imports
+color brightcyan "\<(G_Render|G_Web|OpenGSL|OpenGWS|OpenW2G|OpenGNEL|GeneiaUI)\>"
+
+# Flags
+color brightmagenta "--[a-zA-Z]+"
+color brightmagenta " -[a-zA-Z]\>"
+
+# Control keywords
+color brightred "\<(peat|repeat|turn|exit|check|when|loop|func|give|back|stop|skip|each)\>"
+
+# Import keywords
+color red "\<(import|use|from|export)\>"
+
+# Storage types
+color brightyellow "\<(str|hold|var|msg)\>"
+
+# Builtin functions
+color blue "\<(gmath|time|sys)\>"
+
+# Math functions
+color blue "\<(add|sub|mul|div|mod|rand|len|wait|sqrt|abs|sin|cos|tan|floor|ceil|round|pi|e)\>"
+
+# String functions
+color blue "\<(upper|lower|trim|rev|math|join|split|size|push|pop)\>"
+
+# Time functions
+color blue "\<(now|unix|year|month|day|hour)\>"
+
+# System functions
+color blue "\<(os|arch|sleep)\>"
+
+# Collection functions
+color blue "\<(list|set|del|has|make|call|done|take|send|get)\>"
+
+# Time units
+color cyan "\<t\.[a-z]+\>"
+
+# Numbers
+color brightgreen "\<[0-9]+(\.[0-9]+)?\>"
+color brightgreen "\(\s*-?[0-9]+(\.[0-9]+)?\s*\)"
+
+# Operators
+color white "(&&|\|\||=|\+|-|\*|/|%|\^|&)"

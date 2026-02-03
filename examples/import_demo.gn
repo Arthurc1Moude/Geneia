@@ -1,0 +1,11 @@
+! Import modules demo !
+
+import UI
+import Math
+
+peat 'Modules imported!'
+
+str {name} = 'Geneia'
+peat {name}
+
+repeat 'With modules!' & t.s = (2)

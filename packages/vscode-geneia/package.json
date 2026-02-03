@@ -1,0 +1,115 @@
+{
+  "name": "geneia-language",
+  "displayName": "Geneia Language",
+  "description": "Syntax highlighting, snippets, and language support for Geneia programming language",
+  "version": "1.0.0",
+  "publisher": "MoudeAI",
+  "author": {
+    "name": "Moude AI Inc."
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moude-ai/geneia"
+  },
+  "bugs": {
+    "url": "https://github.com/moude-ai/geneia/issues"
+  },
+  "homepage": "https://geneia.dev",
+  "icon": "images/geneia-icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Formatters"
+  ],
+  "keywords": [
+    "geneia",
+    "gn",
+    "moude",
+    "programming language",
+    "syntax highlighting"
+  ],
+  "activationEvents": [
+    "onLanguage:geneia"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "geneia",
+        "aliases": ["Geneia", "geneia", "gn"],
+        "extensions": [".gn"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./images/geneia-icon.png",
+          "dark": "./images/geneia-icon.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "geneia",
+        "scopeName": "source.geneia",
+        "path": "./syntaxes/geneia.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "geneia",
+        "path": "./snippets/geneia.json"
+      }
+    ],
+    "configuration": {
+      "title": "Geneia",
+      "properties": {
+        "geneia.compilerPath": {
+          "type": "string",
+          "default": "geneia",
+          "description": "Path to the Geneia compiler"
+        },
+        "geneia.formatOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Format Geneia files on save"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "geneia.run",
+        "title": "Run Geneia File",
+        "category": "Geneia"
+      },
+      {
+        "command": "geneia.compile",
+        "title": "Compile Geneia File",
+        "category": "Geneia"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == geneia",
+          "command": "geneia.run",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.0.0"
+  }
+}

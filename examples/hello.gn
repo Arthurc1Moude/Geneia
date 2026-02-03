@@ -1,0 +1,11 @@
+! Hello World in Geneia !
+
+"Welcome to Geneia!"
+
+peat 'Hello, World!'
+
+var {name} = 'Geneia'
+peat 'Language: '
+peat {name}
+
+exit (0)

@@ -1,0 +1,23 @@
+! Geneia S-Extension - UI Helpers !
+! File: ui_helpers.gns !
+
+"UI helper functions for Geneia"
+
+! UI Components !
+str {window_title} = 'Geneia App'
+str {button_text} = 'Click Me'
+hold (window_width) = (800)
+hold (window_height) = (600)
+
+! Functions !
+func create_window
+func create_button
+func show_dialog
+
+! Export for use in other files !
+export window_title
+export button_text
+export create_window
+export create_button
+
+peat 'UI Helpers module loaded'

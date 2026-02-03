@@ -1,0 +1,98 @@
+! 3D Strawberries built with OpenGSL shapes !
+
+"Strawberries made from spheres and shapes"
+
+import OpenGSL
+
+.OpenGSL.canvas '3D Strawberries - OpenGSL' (800) (600)
+.OpenGSL.bg '#1a1a2e'
+
+! Big strawberry in center !
+! Main body - red sphere stretched !
+.OpenGSL.shape.d3 (400) (300) (0) & shape.n = berry1Body
+.OpenGSL.shape.sphere -u (80) '#DC143C'
+
+! Strawberry top - smaller sphere !
+.OpenGSL.shape.d3 (400) (240) (0) & shape.n = berry1Top
+.OpenGSL.shape.sphere -u (40) '#DC143C'
+
+! Green leaves on top !
+.OpenGSL.shape.d3 (370) (210) (0) & shape.n = leaf1
+.OpenGSL.shape.sphere -u (15) '#228B22'
+
+.OpenGSL.shape.d3 (400) (200) (0) & shape.n = leaf2
+.OpenGSL.shape.sphere -u (15) '#228B22'
+
+.OpenGSL.shape.d3 (430) (210) (0) & shape.n = leaf3
+.OpenGSL.shape.sphere -u (15) '#228B22'
+
+.OpenGSL.shape.d3 (385) (205) (0) & shape.n = leaf4
+.OpenGSL.shape.sphere -u (12) '#2E8B2E'
+
+.OpenGSL.shape.d3 (415) (205) (0) & shape.n = leaf5
+.OpenGSL.shape.sphere -u (12) '#2E8B2E'
+
+! Seeds - tiny yellow spheres !
+.OpenGSL.shape.d3 (370) (280) (0) & shape.n = seed1
+.OpenGSL.shape.sphere -u (5) '#FFD700'
+
+.OpenGSL.shape.d3 (430) (280) (0) & shape.n = seed2
+.OpenGSL.shape.sphere -u (5) '#FFD700'
+
+.OpenGSL.shape.d3 (380) (310) (0) & shape.n = seed3
+.OpenGSL.shape.sphere -u (5) '#FFD700'
+
+.OpenGSL.shape.d3 (420) (310) (0) & shape.n = seed4
+.OpenGSL.shape.sphere -u (5) '#FFD700'
+
+.OpenGSL.shape.d3 (400) (340) (0) & shape.n = seed5
+.OpenGSL.shape.sphere -u (5) '#FFD700'
+
+.OpenGSL.shape.d3 (360) (320) (0) & shape.n = seed6
+.OpenGSL.shape.sphere -u (5) '#FFD700'
+
+.OpenGSL.shape.d3 (440) (320) (0) & shape.n = seed7
+.OpenGSL.shape.sphere -u (5) '#FFD700'
+
+! Small strawberry on left !
+.OpenGSL.shape.d3 (150) (350) (0) & shape.n = berry2Body
+.OpenGSL.shape.sphere -u (50) '#FF4444'
+
+.OpenGSL.shape.d3 (150) (310) (0) & shape.n = berry2Top
+.OpenGSL.shape.sphere -u (25) '#FF4444'
+
+.OpenGSL.shape.d3 (135) (290) (0) & shape.n = leaf2a
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+.OpenGSL.shape.d3 (150) (285) (0) & shape.n = leaf2b
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+.OpenGSL.shape.d3 (165) (290) (0) & shape.n = leaf2c
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+! Small strawberry on right !
+.OpenGSL.shape.d3 (650) (350) (0) & shape.n = berry3Body
+.OpenGSL.shape.sphere -u (50) '#FF6666'
+
+.OpenGSL.shape.d3 (650) (310) (0) & shape.n = berry3Top
+.OpenGSL.shape.sphere -u (25) '#FF6666'
+
+.OpenGSL.shape.d3 (635) (290) (0) & shape.n = leaf3a
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+.OpenGSL.shape.d3 (650) (285) (0) & shape.n = leaf3b
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+.OpenGSL.shape.d3 (665) (290) (0) & shape.n = leaf3c
+.OpenGSL.shape.sphere -u (10) '#228B22'
+
+! Title !
+.OpenGSL.shape.d2 (260) (50) & shape.n = title
+.OpenGSL.shape.text -u '3D Strawberries with OpenGSL' '#FFFFFF'
+
+.OpenGSL.shape.d2 (290) (550) & shape.n = footer
+.OpenGSL.shape.text -u 'Built from spheres' '#AAAAAA'
+
+.OpenGSL.render
+
+exit (0)

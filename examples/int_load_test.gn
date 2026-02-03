@@ -1,0 +1,12 @@
+! Test loading .intcnf file !
+
+peat 'Loading INT config file...'
+int load 'examples/mycommands.intcnf'
+
+peat 'Listing commands:'
+int list
+
+peat 'Packing to .intpkf...'
+int pack 'examples/mycommands.intcnf'
+
+peat 'Done!'

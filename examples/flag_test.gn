@@ -1,0 +1,59 @@
+! Flag-based Inner Functions Test !
+
+"String functions - short flags"
+str -u 'hello'
+str -l 'HELLO'
+str -t '  hi  '
+str -r 'abc'
+
+"String functions - long flags"
+str --upper 'world'
+str --lower 'WORLD'
+str --trim '  ok  '
+str --rev 'xyz'
+
+"Time functions - short flags"
+time -n
+time -u
+time -y
+time -m
+time -d
+time -h
+
+"Time functions - long flags"
+time --now
+time --unix
+time --year
+time --month
+time --day
+time --hour
+
+"System functions - short flags"
+sys -o
+sys -a
+
+"System functions - long flags"
+sys --os
+sys --arch
+
+"Math functions - short flags"
+gmath -s (16)
+gmath -a (5)
+gmath -f (3.7)
+gmath -i (3.2)
+gmath -r (3.5)
+gmath -p
+gmath -E
+
+"Math functions - long flags"
+gmath --sqrt (25)
+gmath --abs (10)
+gmath --floor (4.9)
+gmath --ceil (4.1)
+gmath --round (4.5)
+gmath --pi
+gmath --e
+
+peat 'All flag-based functions work!'
+
+exit (0)

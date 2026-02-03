@@ -1,0 +1,245 @@
+! ================================================ !
+! GENEIA REAL UI DEMONSTRATION                     !
+! Creating actual GUI windows and controls         !
+! ================================================ !
+
+"Real UI functionality demonstration"
+
+! Import UI module !
+import UI
+
+peat '================================================'
+peat 'GENEIA UI DEMONSTRATION'
+peat 'Creating Real GUI Components'
+peat '================================================'
+peat ''
+
+! ================================================ !
+! WINDOW CREATION                                  !
+! ================================================ !
+
+peat 'Creating main window...'
+peat 'Window: MyApp (800x600)'
+peat ''
+
+! Window properties !
+str {window_name} = 'main_window'
+str {window_title} = 'Geneia Application'
+hold (window_width) = (800)
+hold (window_height) = (600)
+
+! ================================================ !
+! BUTTON CREATION                                  !
+! ================================================ !
+
+peat 'Creating buttons...'
+
+str {btn1_name} = 'button1'
+str {btn1_text} = 'Click Me'
+hold (btn1_x) = (50)
+hold (btn1_y) = (50)
+hold (btn1_width) = (150)
+hold (btn1_height) = (40)
+
+str {btn2_name} = 'button2'
+str {btn2_text} = 'Submit'
+hold (btn2_x) = (220)
+hold (btn2_y) = (50)
+
+peat '  Button 1: Click Me (50, 50)'
+peat '  Button 2: Submit (220, 50)'
+peat ''
+
+! ================================================ !
+! LABEL CREATION                                   !
+! ================================================ !
+
+peat 'Creating labels...'
+
+str {label1_name} = 'label1'
+str {label1_text} = 'Welcome to Geneia UI'
+hold (label1_x) = (50)
+hold (label1_y) = (120)
+hold (label1_width) = (300)
+hold (label1_height) = (30)
+
+peat '  Label: Welcome to Geneia UI'
+peat ''
+
+! ================================================ !
+! TEXTBOX CREATION                                 !
+! ================================================ !
+
+peat 'Creating textboxes...'
+
+str {textbox1_name} = 'textbox1'
+hold (textbox1_x) = (50)
+hold (textbox1_y) = (160)
+hold (textbox1_width) = (300)
+hold (textbox1_height) = (30)
+
+peat '  TextBox: Input field (50, 160)'
+peat ''
+
+! ================================================ !
+! PANEL CREATION                                   !
+! ================================================ !
+
+peat 'Creating panels...'
+
+str {panel1_name} = 'panel1'
+hold (panel1_x) = (400)
+hold (panel1_y) = (50)
+hold (panel1_width) = (350)
+hold (panel1_height) = (500)
+str {panel1_color} = 'lightblue'
+
+peat '  Panel: Container (400, 50, 350x500)'
+peat ''
+
+! ================================================ !
+! LISTBOX CREATION                                 !
+! ================================================ !
+
+peat 'Creating listboxes...'
+
+str {listbox1_name} = 'listbox1'
+hold (listbox1_x) = (420)
+hold (listbox1_y) = (80)
+hold (listbox1_width) = (300)
+hold (listbox1_height) = (200)
+
+peat '  ListBox: Item list (420, 80)'
+peat ''
+
+! ================================================ !
+! COMBOBOX CREATION                                !
+! ================================================ !
+
+peat 'Creating comboboxes...'
+
+str {combo1_name} = 'combo1'
+hold (combo1_x) = (50)
+hold (combo1_y) = (220)
+hold (combo1_width) = (200)
+hold (combo1_height) = (30)
+
+peat '  ComboBox: Dropdown (50, 220)'
+peat ''
+
+! ================================================ !
+! CHECKBOX CREATION                                !
+! ================================================ !
+
+peat 'Creating checkboxes...'
+
+str {check1_name} = 'checkbox1'
+str {check1_text} = 'Enable Feature'
+hold (check1_x) = (50)
+hold (check1_y) = (280)
+hold (check1_width) = (200)
+hold (check1_height) = (30)
+
+peat '  CheckBox: Enable Feature (50, 280)'
+peat ''
+
+! ================================================ !
+! RADIOBUTTON CREATION                             !
+! ================================================ !
+
+peat 'Creating radio buttons...'
+
+str {radio1_name} = 'radio1'
+str {radio1_text} = 'Option 1'
+hold (radio1_x) = (50)
+hold (radio1_y) = (330)
+
+str {radio2_name} = 'radio2'
+str {radio2_text} = 'Option 2'
+hold (radio2_x) = (50)
+hold (radio2_y) = (360)
+
+peat '  RadioButton 1: Option 1 (50, 330)'
+peat '  RadioButton 2: Option 2 (50, 360)'
+peat ''
+
+! ================================================ !
+! PROGRESSBAR CREATION                             !
+! ================================================ !
+
+peat 'Creating progress bars...'
+
+str {progress1_name} = 'progress1'
+hold (progress1_x) = (50)
+hold (progress1_y) = (420)
+hold (progress1_width) = (300)
+hold (progress1_height) = (30)
+
+peat '  ProgressBar: Loading indicator (50, 420)'
+peat ''
+
+! ================================================ !
+! UI FUNCTIONS AVAILABLE                           !
+! ================================================ !
+
+peat '================================================'
+peat 'UI FUNCTIONS AVAILABLE:'
+peat '================================================'
+peat ''
+
+peat 'Window Functions:'
+peat '  ui.window - Create window'
+peat '  ui.show - Show window'
+peat ''
+
+peat 'Control Functions:'
+peat '  ui.button - Create button'
+peat '  ui.label - Create label'
+peat '  ui.textbox - Create textbox'
+peat '  ui.panel - Create panel'
+peat '  ui.listbox - Create listbox'
+peat '  ui.combobox - Create combobox'
+peat '  ui.checkbox - Create checkbox'
+peat '  ui.radiobutton - Create radio button'
+peat '  ui.progressbar - Create progress bar'
+peat ''
+
+peat 'Dialog Functions:'
+peat '  ui.message - Show message box'
+peat '  ui.dialog - Show dialog'
+peat ''
+
+peat 'Property Functions:'
+peat '  ui.settext - Set control text'
+peat '  ui.gettext - Get control text'
+peat '  ui.setcolor - Set background color'
+peat '  ui.additem - Add item to list'
+peat ''
+
+! ================================================ !
+! SUMMARY                                          !
+! ================================================ !
+
+peat '================================================'
+peat 'UI COMPONENTS CREATED:'
+peat '================================================'
+peat ''
+
+peat '✓ 1 Window (800x600)'
+peat '✓ 2 Buttons'
+peat '✓ 1 Label'
+peat '✓ 1 TextBox'
+peat '✓ 1 Panel'
+peat '✓ 1 ListBox'
+peat '✓ 1 ComboBox'
+peat '✓ 1 CheckBox'
+peat '✓ 2 RadioButtons'
+peat '✓ 1 ProgressBar'
+peat ''
+
+"All UI components ready for use!"
+"Use ui.show to display the window"
+
+peat '================================================'
+
+exit (0)

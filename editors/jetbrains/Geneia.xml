@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filetype binary="false" default_extension="gn" description="Geneia Programming Language" name="Geneia">
+  <highlighting>
+    <options>
+      <option name="LINE_COMMENT" value="!" />
+      <option name="COMMENT_START" value="!" />
+      <option name="COMMENT_END" value="!" />
+      <option name="HEX_PREFIX" value="" />
+      <option name="NUM_POSTFIXES" value="" />
+      <option name="HAS_BRACES" value="true" />
+      <option name="HAS_BRACKETS" value="true" />
+      <option name="HAS_PARENS" value="true" />
+      <option name="HAS_STRING_ESCAPES" value="false" />
+    </options>
+    <keywords keywords="back;check;each;exit;func;give;loop;peat;repeat;skip;stop;turn;when" ignore_case="false" />
+    <keywords2 keywords="export;from;import;use" />
+    <keywords3 keywords="hold;msg;str;var" />
+    <keywords4 keywords="abs;add;arch;call;ceil;cos;day;del;div;done;e;floor;get;gmath;has;hour;join;len;list;lower;make;math;mod;month;mul;now;os;pi;pop;push;rand;rev;round;send;set;sin;size;sleep;split;sqrt;sub;sys;take;tan;time;trim;unix;upper;wait;year" />
+  </highlighting>
+  <extensionMap>
+    <mapping ext="gn" />
+  </extensionMap>
+</filetype>

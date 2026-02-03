@@ -1,0 +1,59 @@
+! Rainbow Colored GUI App !
+
+"A beautiful rainbow-themed application"
+
+import GeneiaUI
+
+! Create main window !
+.GeneiaUI.window 'Rainbow App'
+.GeneiaUI.theme 'rainbow'
+
+! Rainbow colors !
+.GeneiaUI.color '#FF0000'
+.GeneiaUI.label 'Red - Passion'
+
+.GeneiaUI.color '#FF7F00'
+.GeneiaUI.label 'Orange - Energy'
+
+.GeneiaUI.color '#FFFF00'
+.GeneiaUI.label 'Yellow - Joy'
+
+.GeneiaUI.color '#00FF00'
+.GeneiaUI.label 'Green - Growth'
+
+.GeneiaUI.color '#0000FF'
+.GeneiaUI.label 'Blue - Trust'
+
+.GeneiaUI.color '#4B0082'
+.GeneiaUI.label 'Indigo - Wisdom'
+
+.GeneiaUI.color '#9400D3'
+.GeneiaUI.label 'Violet - Creativity'
+
+! Rainbow buttons !
+.GeneiaUI.panel
+.GeneiaUI.button 'Red Button'
+.GeneiaUI.button 'Orange Button'
+.GeneiaUI.button 'Yellow Button'
+.GeneiaUI.button 'Green Button'
+.GeneiaUI.button 'Blue Button'
+.GeneiaUI.button 'Indigo Button'
+.GeneiaUI.button 'Violet Button'
+
+! Menu !
+.GeneiaUI.menu 'File'
+.GeneiaUI.menu 'Edit'
+.GeneiaUI.menu 'Rainbow'
+.GeneiaUI.menu 'Help'
+
+! Toolbar !
+.GeneiaUI.toolbar
+
+! Status bar !
+.GeneiaUI.status 'Rainbow Mode Active'
+
+! Show and run !
+.GeneiaUI.show
+.GeneiaUI.run
+
+exit (0)

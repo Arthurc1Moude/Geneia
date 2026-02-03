@@ -1,0 +1,56 @@
+! Complete Geneia Test - All Features !
+
+"Testing all language features"
+
+! Import modules !
+import UI
+import Math
+import Graphics
+
+! String variables !
+str {title} = 'Geneia Complete Test'
+str {version} = '1.0.0'
+str {status} = 'Running'
+
+! Number variables !
+hold (count) = (10)
+hold (loops) = (3)
+hold (code) = (0)
+
+! Output tests !
+peat {title}
+peat 'Version: '
+peat {version}
+peat 'Status: '
+peat {status}
+
+! Repeat with time units !
+"Testing repeat with different time units"
+repeat 'Second test' & t.s = (2)
+repeat 'Millisecond test' & t.ms = (3)
+
+! Turn blocks !
+"Testing turn blocks"
+turn (2) {
+    peat 'Turn iteration'
+    peat 'Multiple statements work'
+    peat 'All lines execute'
+}
+
+! Nested operations !
+turn (1) {
+    peat 'Nested block'
+    repeat 'Inside turn' & t.s = (2)
+}
+
+! Built-in msg !
+peat msg
+
+! Tips !
+"All features working correctly"
+"Import system functional"
+"Syntax highlighting available"
+
+! Exit !
+peat 'Test complete - all lines executed!'
+exit (0)

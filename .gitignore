@@ -1,0 +1,7 @@
+*.o
+*.exe
+geneia
+bin/
+obj/
+*.user
+.vs/

@@ -1,0 +1,101 @@
+name: Build Electron App
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: geneia-studio-desktop/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: geneia-studio-desktop
+        run: npm ci
+      
+      - name: Build web app
+        working-directory: geneia-studio-desktop
+        run: npm run build
+      
+      - name: Build Electron app (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        working-directory: geneia-studio-desktop
+        run: npm run electron:build -- --linux
+      
+      - name: Build Electron app (Windows)
+        if: matrix.os == 'windows-latest'
+        working-directory: geneia-studio-desktop
+        run: npm run electron:build -- --win
+      
+      - name: Build Electron app (macOS)
+        if: matrix.os == 'macos-latest'
+        working-directory: geneia-studio-desktop
+        run: npm run electron:build -- --mac
+      
+      - name: Upload artifacts (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        uses: actions/upload-artifact@v3
+        with:
+          name: linux-builds
+          path: |
+            geneia-studio-desktop/release/*.AppImage
+            geneia-studio-desktop/release/*.deb
+            geneia-studio-desktop/release/*.rpm
+            geneia-studio-desktop/release/*.snap
+      
+      - name: Upload artifacts (Windows)
+        if: matrix.os == 'windows-latest'
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows-builds
+          path: |
+            geneia-studio-desktop/release/*.exe
+      
+      - name: Upload artifacts (macOS)
+        if: matrix.os == 'macos-latest'
+        uses: actions/upload-artifact@v3
+        with:
+          name: macos-builds
+          path: |
+            geneia-studio-desktop/release/*.dmg
+            geneia-studio-desktop/release/*.zip
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            linux-builds/*
+            windows-builds/*
+            macos-builds/*
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

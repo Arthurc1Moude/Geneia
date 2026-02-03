@@ -49,16 +49,49 @@
       "dist/electron/**/*"
     ],
     "mac": {
-      "target": "dmg",
-      "icon": "public/icon.icns"
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "public/icon.icns",
+      "category": "public.app-category.developer-tools"
     },
     "win": {
-      "target": "nsis",
+      "target": [
+        "nsis",
+        "portable"
+      ],
       "icon": "public/icon.ico"
     },
     "linux": {
-      "target": "AppImage",
-      "icon": "public/icon.png"
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "snap"
+      ],
+      "icon": "public/icon.png",
+      "category": "Development",
+      "maintainer": "Moude AI Inc. <support@moude.ai>",
+      "vendor": "Moude AI Inc.",
+      "synopsis": "Geneia Studio IDE - Desktop & Web Codespaces",
+      "description": "Modern IDE for Geneia programming language with syntax highlighting, code completion, and debugging support."
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "deb": {
+      "depends": [
+        "gconf2",
+        "gconf-service",
+        "libnotify4",
+        "libappindicator1",
+        "libxtst6",
+        "libnss3"
+      ]
     }
   }
 }

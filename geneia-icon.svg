@@ -52,14 +52,14 @@
   <ellipse cx="54" cy="50" rx="25" ry="20" fill="url(#highlight)"/>
   
   <!-- G letter -->
-  <g fill="none" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.95">
-    <!-- Outer circle (C shape) -->
-    <path d="M 64 32
-             A 28 28 0 1 0 64 88
-             A 28 28 0 0 0 92 60"/>
+  <g fill="none" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.98">
+    <!-- Outer circle (C shape) - perfectly round -->
+    <path d="M 64 30
+             A 30 30 0 1 0 64 90
+             A 30 30 0 0 0 94 60"/>
     <!-- Horizontal bar -->
-    <line x1="64" y1="60" x2="88" y2="60"/>
+    <line x1="64" y1="60" x2="90" y2="60"/>
     <!-- Vertical bar -->
-    <line x1="88" y1="60" x2="88" y2="70"/>
+    <line x1="90" y1="60" x2="90" y2="72"/>
   </g>
 </svg>

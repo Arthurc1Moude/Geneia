@@ -90,3 +90,54 @@ void SystemUtils::CreateShortcut(const std::string& target, const std::string& s
     symlink(target.c_str(), shortcutPath.c_str());
 #endif
 }
+
+void SystemUtils::CreateDesktopShortcut(const std::string& targetPath, const std::string& name) {
+#ifdef _WIN32
+    // Windows: Create .lnk file on desktop
+    char desktopPath[MAX_PATH];
+    SHGetFolderPathA(NULL, CSIDL_DESKTOP, NULL, 0, desktopPath);
+    std::string shortcutPath = std::string(desktopPath) + "\\" + name + ".lnk";
+    CreateShortcut(targetPath, shortcutPath);
+#elif __APPLE__
+    // macOS: Create launcher script on desktop
+    std::string home = getenv("HOME");
+    std::string desktopPath = home + "/Desktop/" + name;
+    
+    std::ofstream launcher(desktopPath);
+    if (launcher.is_open()) {
+        launcher << "#!/bin/bash\n";
+        launcher << "\"" << targetPath << "\" \"$@\"\n";
+        launcher.close();
+        chmod(desktopPath.c_str(), 0755);
+    }
+#else
+    // Linux: Create .desktop file
+    std::string home = getenv("HOME");
+    std::string desktopPath = home + "/Desktop/" + name + ".desktop";
+    
+    // Extract directory from targetPath for icon
+    std::string iconPath = targetPath.substr(0, targetPath.find_last_of("/")) + "/../share/icons/geneia.png";
+    
+    std::ofstream desktopFile(desktopPath);
+    if (desktopFile.is_open()) {
+        desktopFile << "[Desktop Entry]\n";
+        desktopFile << "Version=1.0\n";
+        desktopFile << "Type=Application\n";
+        desktopFile << "Name=" << name << "\n";
+        desktopFile << "Comment=Geneia Programming Language IDE\n";
+        desktopFile << "Exec=" << targetPath << " %F\n";
+        desktopFile << "Icon=" << iconPath << "\n";
+        desktopFile << "Terminal=false\n";
+        desktopFile << "Categories=Development;IDE;\n";
+        desktopFile << "Keywords=programming;compiler;geneia;\n";
+        desktopFile.close();
+        chmod(desktopPath.c_str(), 0755);
+    }
+    
+    // Also install to applications menu
+    std::string appsDir = home + "/.local/share/applications";
+    system(("mkdir -p " + appsDir).c_str());
+    std::string appsPath = appsDir + "/" + name + ".desktop";
+    system(("cp " + desktopPath + " " + appsPath).c_str());
+#endif
+}

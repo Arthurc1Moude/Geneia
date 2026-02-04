@@ -9,6 +9,7 @@ public:
     static std::string GetPlatform();
     static bool IsAdmin();
     static void CreateShortcut(const std::string& target, const std::string& shortcutPath);
+    static void CreateDesktopShortcut(const std::string& targetPath, const std::string& name);
 };
 
 #endif

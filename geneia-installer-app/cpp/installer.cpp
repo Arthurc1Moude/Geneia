@@ -52,6 +52,9 @@ public:
             // Add to PATH (platform-specific)
             SystemUtils::AddToPath(installPath + "/bin");
 
+            // Create desktop shortcut
+            SystemUtils::CreateDesktopShortcut(installPath + "/bin/geneia", "Geneia IDE");
+
             Napi::Object result = Napi::Object::New(env);
             result.Set("success", Napi::Boolean::New(env, true));
             result.Set("installPath", Napi::String::New(env, installPath));

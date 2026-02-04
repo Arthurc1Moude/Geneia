@@ -18,6 +18,9 @@
 - 🔄 Real-time progress tracking
 - 💻 System detection & validation
 - 🎯 Clean, frameless window design
+- 🖥️ **Automatic desktop shortcut creation**
+- 🔧 **Automatic PATH configuration**
+- 📱 **Application menu integration (Linux)**
 
 ## 📦 Installation
 
@@ -47,7 +50,19 @@ npm run build
 npm run package:win    # Windows
 npm run package:mac    # macOS
 npm run package:linux  # Linux
+
+# Build all platforms at once (automated script)
+npm run build-all
 ```
+
+The `build-all` script will:
+1. Clean previous builds
+2. Install dependencies
+3. Build Next.js frontend
+4. Build Electron main process
+5. Compile C++ native addons
+6. Package installers for your platform
+7. Output to `release/` directory
 
 ## 📁 Project Structure
 

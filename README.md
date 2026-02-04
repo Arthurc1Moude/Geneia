@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="geneia-language-icon.svg" alt="Geneia Language Icon" width="120" height="120">
+  <img src="geneia-language-icon.svg" alt="Geneia Language Icon" width="200" height="200">
 </p>
 
 # Geneia

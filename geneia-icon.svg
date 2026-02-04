@@ -52,5 +52,5 @@
   <ellipse cx="54" cy="50" rx="25" ry="20" fill="url(#highlight)"/>
   
   <!-- G letter -->
-  <text x="64" y="78" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">G</text>
+  <text x="64" y="78" font-family="'Product Sans', 'Google Sans', 'Roboto', sans-serif" font-size="58" font-weight="500" fill="white" text-anchor="middle" opacity="0.95">G</text>
 </svg>

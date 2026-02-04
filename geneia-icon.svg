@@ -53,13 +53,13 @@
   
   <!-- G letter - drawn circular -->
   <g fill="none" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.95">
-    <!-- Main circular arc -->
-    <path d="M 88 45
-             A 26 26 0 1 1 36 60
-             A 26 26 0 0 1 64 34"/>
+    <!-- Main circular arc (C shape) -->
+    <path d="M 90 50
+             A 28 28 0 1 1 38 60
+             A 28 28 0 0 1 64 32"/>
     <!-- Horizontal bar -->
-    <line x1="64" y1="60" x2="88" y2="60"/>
+    <line x1="64" y1="60" x2="90" y2="60"/>
     <!-- Vertical bar -->
-    <line x1="88" y1="60" x2="88" y2="68"/>
+    <line x1="90" y1="50" x2="90" y2="66"/>
   </g>
 </svg>

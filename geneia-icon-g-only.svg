@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <!-- Light blue background circle -->
-  <circle cx="64" cy="64" r="60" fill="#e3f2fd"/>
+  <!-- Darker blue background circle - smaller to fit G -->
+  <circle cx="64" cy="64" r="42" fill="#5090d0"/>
   
   <!-- G letter - thinner white ring with right horizontal bar -->
   <g fill="white">

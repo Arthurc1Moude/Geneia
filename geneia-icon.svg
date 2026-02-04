@@ -51,22 +51,20 @@
   <!-- Center highlight -->
   <ellipse cx="54" cy="50" rx="25" ry="20" fill="url(#highlight)"/>
   
-  <!-- G letter - circular with gap in horizontal bar -->
+  <!-- G letter - circular with only right horizontal bar -->
   <g fill="white">
+    <!-- Main circular part of G -->
     <path d="M 64 30
              A 34 34 0 1 0 64 98
              A 34 34 0 0 0 98 64
              L 98 72
-             L 74 72
-             L 74 66
-             L 90 66
-             L 90 64
-             A 26 26 0 1 1 64 38
-             A 26 26 0 0 1 90 64
+             L 90 72
              L 90 66
              L 98 66
              L 98 64
              A 34 34 0 0 0 64 30 Z" 
-          fill="white" opacity="0.95"/>
+          fill="white" opacity="0.95" stroke="white" stroke-width="8"/>
+    <!-- Right horizontal bar only -->
+    <rect x="76" y="66" width="22" height="6" fill="white" opacity="0.95"/>
   </g>
 </svg>

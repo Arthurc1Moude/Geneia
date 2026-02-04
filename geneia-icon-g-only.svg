@@ -1,35 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <!-- Blue gradient for G -->
-    <linearGradient id="gGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6098d8"/>
-      <stop offset="50%" style="stop-color:#5080c0"/>
-      <stop offset="100%" style="stop-color:#4070b0"/>
-    </linearGradient>
-  </defs>
+  <!-- Light blue background circle -->
+  <circle cx="64" cy="64" r="60" fill="#e3f2fd"/>
   
-  <!-- G letter - ring shape with only right horizontal bar -->
-  <g fill="url(#gGradient)">
-    <!-- Main ring part of G (outer circle minus inner circle) -->
-    <path d="M 64 20
-             A 44 44 0 1 0 64 108
-             A 44 44 0 0 0 108 64
-             L 108 82
-             L 90 82
-             L 90 64
-             A 26 26 0 0 1 64 38
-             A 26 26 0 1 1 90 64
-             L 90 82
-             L 108 82
-             L 108 64
-             A 44 44 0 0 0 64 20 Z
-             M 64 38
-             A 26 26 0 1 0 64 90
-             A 26 26 0 0 0 90 64
-             L 90 64
-             A 26 26 0 0 0 64 38 Z" 
-          fill="url(#gGradient)" fill-rule="evenodd"/>
-    <!-- Right horizontal bar only -->
-    <rect x="80" y="60" width="28" height="8" fill="url(#gGradient)"/>
+  <!-- G letter - thinner white ring with right horizontal bar -->
+  <g fill="white">
+    <!-- Main ring part of G (outer circle minus inner circle) - thinner -->
+    <path d="M 64 24
+             A 40 40 0 1 0 64 104
+             A 40 40 0 0 0 104 64
+             L 104 78
+             L 88 78
+             L 88 64
+             A 24 24 0 0 1 64 40
+             A 24 24 0 1 1 88 64
+             L 88 78
+             L 104 78
+             L 104 64
+             A 40 40 0 0 0 64 24 Z
+             M 64 32
+             A 32 32 0 1 0 64 96
+             A 32 32 0 0 0 96 64
+             L 96 64
+             A 32 32 0 0 0 64 32 Z" 
+          fill="white" fill-rule="evenodd"/>
+    <!-- Right horizontal bar only - thinner -->
+    <rect x="82" y="62" width="22" height="4" fill="white"/>
   </g>
 </svg>

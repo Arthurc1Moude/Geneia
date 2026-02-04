@@ -235,48 +235,34 @@ end
 
 ## Installation
 
-Download and run the Geneia Installer for your platform:
+**Installers coming soon!** We're preparing easy-to-use installers for all platforms.
 
-### Windows
-- Download `Geneia-Installer-Setup.exe` from [GitHub Releases](https://github.com/Arthurc1Moude/Geneia/releases)
-- Run the installer and follow the setup wizard
-- The installer will automatically:
-  - Install Geneia compiler and tools
-  - Add Geneia to your system PATH
-  - Create a desktop shortcut
-  - Set up all necessary modules
+For now, build from source:
 
-### macOS
-- Download `Geneia-Installer.dmg` from [GitHub Releases](https://github.com/Arthurc1Moude/Geneia/releases)
-- Open the DMG and drag Geneia Installer to Applications
-- Run the installer
-- The installer will automatically configure everything
-
-### Linux
-
-**AppImage (Universal):**
 ```bash
-# Download and run
-chmod +x Geneia-Installer-*.AppImage
-./Geneia-Installer-*.AppImage
+git clone https://github.com/Arthurc1Moude/Geneia.git
+cd Geneia/compiler
+make
+sudo make install
 ```
 
-**Debian/Ubuntu (.deb):**
-```bash
-sudo dpkg -i geneia-installer_*.deb
-geneia-installer
-```
-
-**Fedora/RHEL (.rpm):**
-```bash
-sudo rpm -i geneia-installer-*.rpm
-geneia-installer
-```
-
-After installation, verify:
+Verify installation:
 ```bash
 geneia --version
 ```
+
+### Upcoming Installers
+
+We're building native installers that will:
+- ✅ Automatically install Geneia compiler and tools
+- ✅ Add Geneia to your system PATH
+- ✅ Create a desktop shortcut
+- ✅ Set up all necessary modules
+
+**Platforms:**
+- Windows: NSIS installer + portable executable
+- macOS: DMG disk image
+- Linux: AppImage, .deb (Ubuntu/Debian), .rpm (Fedora/RHEL)
 
 ---
 

@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-# Geneia Programming Language
-
-A modern, unique programming language with clean syntax, powerful features, and full GUI support.
-
-**Created by Moude AI Inc.**
-
-## Quick Start
-
-```geneia
-! Hello World !
-
-peat 'Hello, World!'
-
-exit (0)
-```
-
-## Installation
-
-### NPM (Recommended)
-=======
 # Geneia
 Code with clarity. Build with confidence.
 
@@ -34,8 +13,10 @@ Experience the joy of coding with a language that respects your time and creativ
 
 ###### ❤  *Developed with care by Moude AI Inc.*
 
+---
 
-### Open Tools Ecosystem
+## Open Tools Ecosystem
+
 Geneia comes with a powerful suite of open tools that extend its capabilities:
 
 ### OpenGSL
@@ -78,121 +59,10 @@ Complete web development toolkit for generating modern, responsive websites dire
 
 ### Installation via npm
 
->>>>>>> 4d7540e43bba12d0c4e13c0bed5cdc8fba489627
 ```bash
 npm install -g geneia
 ```
 
-<<<<<<< HEAD
-### Build from Source
-```bash
-cd compiler
-make
-./geneia examples/hello.gn
-```
-
-## Features
-
-- 🎯 Clean, unique syntax
-- 📦 Built-in modules (String, Time, Math, Sys)
-- 🔧 Flag-based functions
-- 🔄 Unit conversions
-- 🖥️ Cross-platform
-- 🎨 GUI support
-
-## Syntax
-
-### Variables
-```geneia
-str {name} = 'Geneia'
-hold {count} = (10)
-```
-
-### Output
-```geneia
-peat 'Hello!'
-peat {name}
-```
-
-### String Operations
-```geneia
-str -u 'hello'        ! HELLO !
-str -l 'HELLO'        ! hello !
-str -t '  hi  '       ! hi !
-str -r 'abc'          ! cba !
-```
-
-### Time Operations
-```geneia
-time -n               ! Current datetime !
-time -u               ! Unix timestamp !
-time -y               ! Year !
-```
-
-### System Operations
-```geneia
-sys -o                ! OS !
-sys -a                ! Architecture !
-sys -w (1000)         ! Sleep 1s !
-```
-
-### Math Operations
-```geneia
-gmath (5) + (3)       ! 8 !
-gmath -s (16)         ! 4 (sqrt) !
-gmath -C (100) 'cm' 'in'  ! Convert !
-```
-
-### Loops
-```geneia
-turn (5) {
-    peat 'Loop!'
-}
-```
-
-### Functions
-```geneia
-func greet {
-    peat 'Hello!'
-}
-greet
-```
-
-## Editor Support
-
-- **VS Code / Kiro**: Install "Geneia Language" extension
-- **Sublime Text**: See `editors/sublime/`
-- **Vim / Neovim**: See `editors/vim/`
-- **Emacs**: See `editors/emacs/`
-- **JetBrains**: See `editors/jetbrains/`
-- **Nano**: See `editors/nano/`
-
-## Project Structure
-
-```
-Geneia/
-├── compiler/          # Geneia compiler (C++)
-├── examples/          # Example .gn files
-├── modules/           # Geneia modules
-├── editors/           # Editor syntax files
-├── packages/          # Publishable packages
-│   ├── vscode-geneia/ # VS Code extension
-│   └── geneia-cli/    # npm package
-├── ui/                # GUI components
-├── website/           # geneia.dev source
-└── opengsl/           # OpenGSL library
-```
-
-## Documentation
-
-- [Website](https://geneia.dev)
-- [Docs](https://geneia.dev/docs)
-- [Playground](https://geneia.dev/playground)
-
-## License
-
-MIT © Moude AI Inc.
-=======
 Verify installation:
 
 ```bash
@@ -375,7 +245,7 @@ end
 
 ### Windows
 
-1. Download the latest release from [GitHub Releases](https://github.com/moude-ai/geneia/releases)
+1. Download the latest release from [GitHub Releases](https://github.com/Arthurc1Moude/Geneia/releases)
 2. Extract `geneia-win64.zip` to a folder (e.g., `C:\Program Files\Geneia`)
 3. Add to PATH:
    - Open System Properties → Advanced → Environment Variables
@@ -431,8 +301,8 @@ yay -S geneia
 ### Build from Source
 
 ```bash
-git clone https://github.com/moude-ai/geneia.git
-cd geneia/compiler
+git clone https://github.com/Arthurc1Moude/Geneia.git
+cd Geneia/compiler
 make
 sudo make install
 ```
@@ -489,164 +359,10 @@ echo 'include "/usr/share/nano/geneia.nanorc"' >> ~/.nanorc
 
 ---
 
-## Directory Structure
-
-After installation, Geneia files are organized as follows:
-
-### Linux / macOS
-
-```
-/usr/local/
-├── bin/
-│   └── geneia                  # Main executable
-├── lib/geneia/
-│   └── modules/                # Standard library
-│       ├── GWS.gn              # Web server module
-│       ├── GNEL.gn             # File operations module
-│       ├── G_Render.gn         # Rendering module
-│       └── G_Web.gn            # Web toolkit module
-└── share/geneia/
-    └── examples/               # Sample programs
-```
-
-### Windows
-
-```
-C:\Program Files\Geneia\
-├── bin\
-│   └── geneia.exe              # Main executable
-├── modules\                    # Standard library
-│   ├── GWS.gn
-│   ├── GNEL.gn
-│   ├── G_Render.gn
-│   └── G_Web.gn
-└── examples\                   # Sample programs
-```
-
----
-
-## Configuration
-
-Geneia looks for configuration in these locations (in order of priority):
-
-1. `.geneiarc` in current directory
-2. `.geneiarc` in home directory
-3. Environment variable `GENEIA_CONFIG`
-
-Example `.geneiarc`:
-
-```
-modules_path = /custom/modules
-output_color = true
-strict_mode = false
-debug = false
-```
-
----
-
-## Updating Geneia
-
-### npm
-
-```bash
-npm update -g geneia
-```
-
-### Homebrew
-
-```bash
-brew upgrade geneia
-```
-
-### apt (Ubuntu/Debian)
-
-```bash
-sudo apt update
-sudo apt upgrade geneia
-```
-
-### From Source
-
-```bash
-cd geneia
-git pull
-cd compiler
-make clean
-make
-sudo make install
-```
-
----
-
-## Uninstalling
-
-### npm
-
-```bash
-npm uninstall -g geneia
-```
-
-### Homebrew
-
-```bash
-brew uninstall geneia
-```
-
-### apt (Ubuntu/Debian)
-
-```bash
-sudo apt remove geneia
-```
-
-### Manual (from source)
-
-```bash
-sudo rm /usr/local/bin/geneia
-sudo rm -rf /usr/local/lib/geneia
-sudo rm -rf /usr/local/share/geneia
-```
-
----
-
-## Troubleshooting
-
-### "geneia: command not found"
-
-Make sure the installation directory is in your PATH:
-
-```bash
-# Check if geneia is in PATH
-which geneia
-
-# Add to PATH (Linux/macOS)
-export PATH="$PATH:/usr/local/bin"
-
-# Add to PATH permanently
-echo 'export PATH="$PATH:/usr/local/bin"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-### Permission denied
-
-```bash
-# Linux/macOS
-sudo chmod +x /usr/local/bin/geneia
-```
-
-### Module not found
-
-Set the modules path environment variable:
-
-```bash
-export GENEIA_MODULES=/path/to/geneia/modules
-```
-
----
-
 ## Resources
 
 - 📖 **Documentation:** https://geneia.dev/docs
-- 🐛 **Issues:** https://github.com/moude-ai/geneia/issues
+- 🐛 **Issues:** https://github.com/Arthurc1Moude/Geneia/issues
 - 💬 **Community:** https://discord.gg/geneia
 - 📦 **VS Code Extension:** https://marketplace.visualstudio.com/items?itemName=MoudeAI.geneia-language
 
@@ -654,8 +370,6 @@ export GENEIA_MODULES=/path/to/geneia/modules
 
 **Publisher:** MoudeAI  
 **License:** MIT  
-**Repository:** [github.com/moude-ai/geneia](https://github.com/moude-ai/geneia)
+**Repository:** [github.com/Arthurc1Moude/Geneia](https://github.com/Arthurc1Moude/Geneia)
 
 ###### ❤ *Developed with care by Moude AI Inc.*
-
->>>>>>> 4d7540e43bba12d0c4e13c0bed5cdc8fba489627

@@ -51,20 +51,20 @@
   <!-- Center highlight -->
   <ellipse cx="54" cy="50" rx="25" ry="20" fill="url(#highlight)"/>
   
-  <!-- G letter - more circular and smooth -->
+  <!-- G letter - more circular with thinner, lower horizontal bar -->
   <g fill="white">
     <path d="M 64 30
              A 34 34 0 1 0 64 98
              A 34 34 0 0 0 98 64
-             L 98 74
-             L 68 74
-             L 68 58
-             L 90 58
+             L 98 72
+             L 68 72
+             L 68 66
+             L 90 66
              L 90 64
              A 26 26 0 1 1 64 38
              A 26 26 0 0 1 90 64
-             L 90 58
-             L 98 58
+             L 90 66
+             L 98 66
              L 98 64
              A 34 34 0 0 0 64 30 Z" 
           fill="white" opacity="0.95"/>

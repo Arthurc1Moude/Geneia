@@ -63,7 +63,7 @@
              L 98 66
              L 98 64
              A 34 34 0 0 0 64 30 Z" 
-          fill="white" opacity="0.95" stroke="white" stroke-width="8"/>
+          fill="white" opacity="0.95"/>
     <!-- Right horizontal bar only -->
     <rect x="76" y="66" width="22" height="6" fill="white" opacity="0.95"/>
   </g>

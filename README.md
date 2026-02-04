@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="geneia-language-icon.svg" alt="Geneia Language Icon" width="120" height="120">
+</p>
+
 # Geneia
 Code with clarity. Build with confidence.
 

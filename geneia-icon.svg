@@ -52,14 +52,5 @@
   <ellipse cx="54" cy="50" rx="25" ry="20" fill="url(#highlight)"/>
   
   <!-- G letter -->
-  <g fill="none" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.95">
-    <path d="M 64 32
-             A 28 28 0 1 0 64 88
-             A 28 28 0 0 0 92 60
-             M 92 60
-             L 92 66
-             L 66 66
-             M 66 60
-             L 92 60"/>
-  </g>
+  <text x="64" y="78" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle" opacity="0.95">G</text>
 </svg>

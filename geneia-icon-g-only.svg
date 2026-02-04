@@ -29,8 +29,8 @@
   <!-- Highlight for 3D effect -->
   <ellipse cx="54" cy="50" rx="20" ry="15" fill="white" opacity="0.25"/>
   
-  <!-- G letter - thinner white ring with right horizontal bar -->
-  <g fill="white" filter="url(#shadow)">
+  <!-- G letter - thinner white ring with right horizontal bar (no shadow) -->
+  <g fill="white">
     <!-- Main ring part of G (outer circle minus inner circle) - thinner -->
     <path d="M 64 24
              A 40 40 0 1 0 64 104

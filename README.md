@@ -61,18 +61,6 @@ Complete web development toolkit for generating modern, responsive websites dire
 
 ## Quick Start
 
-### Installation via npm
-
-```bash
-npm install -g geneia
-```
-
-Verify installation:
-
-```bash
-geneia --version
-```
-
 ### Your First Program
 
 Create `hello.gn`:
@@ -245,70 +233,49 @@ end
 
 ---
 
-## Installation Guide
+## Installation
+
+Download and run the Geneia Installer for your platform:
 
 ### Windows
-
-1. Download the latest release from [GitHub Releases](https://github.com/Arthurc1Moude/Geneia/releases)
-2. Extract `geneia-win64.zip` to a folder (e.g., `C:\Program Files\Geneia`)
-3. Add to PATH:
-   - Open System Properties → Advanced → Environment Variables
-   - Under "System variables", find `Path` and click Edit
-   - Add `C:\Program Files\Geneia\bin`
-   - Click OK to save
-4. Open a new Command Prompt and verify:
-
-```cmd
-geneia --version
-```
+- Download `Geneia-Installer-Setup.exe` from [GitHub Releases](https://github.com/Arthurc1Moude/Geneia/releases)
+- Run the installer and follow the setup wizard
+- The installer will automatically:
+  - Install Geneia compiler and tools
+  - Add Geneia to your system PATH
+  - Create a desktop shortcut
+  - Set up all necessary modules
 
 ### macOS
+- Download `Geneia-Installer.dmg` from [GitHub Releases](https://github.com/Arthurc1Moude/Geneia/releases)
+- Open the DMG and drag Geneia Installer to Applications
+- Run the installer
+- The installer will automatically configure everything
 
-Using Homebrew:
+### Linux
 
+**AppImage (Universal):**
 ```bash
-brew tap moude-ai/geneia
-brew install geneia
+# Download and run
+chmod +x Geneia-Installer-*.AppImage
+./Geneia-Installer-*.AppImage
 ```
 
-Or using the install script:
-
+**Debian/Ubuntu (.deb):**
 ```bash
-curl -fsSL https://geneia.dev/install.sh | bash
+sudo dpkg -i geneia-installer_*.deb
+geneia-installer
 ```
 
-### Linux (Ubuntu/Debian)
-
+**Fedora/RHEL (.rpm):**
 ```bash
-# Add repository
-curl -fsSL https://geneia.dev/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/geneia.gpg
-echo "deb [signed-by=/usr/share/keyrings/geneia.gpg] https://geneia.dev/apt stable main" | sudo tee /etc/apt/sources.list.d/geneia.list
-
-# Install
-sudo apt update
-sudo apt install geneia
+sudo rpm -i geneia-installer-*.rpm
+geneia-installer
 ```
 
-### Linux (Fedora/RHEL)
-
+After installation, verify:
 ```bash
-sudo dnf copr enable moude-ai/geneia
-sudo dnf install geneia
-```
-
-### Linux (Arch)
-
-```bash
-yay -S geneia
-```
-
-### Build from Source
-
-```bash
-git clone https://github.com/Arthurc1Moude/Geneia.git
-cd Geneia/compiler
-make
-sudo make install
+geneia --version
 ```
 
 ---

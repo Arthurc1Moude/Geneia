@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "Modern Geneia IDE Installer with Next.js + Electron",
   "main": "dist-electron/main.js",
+  "author": {
+    "name": "Arthur Moude",
+    "email": "arthur@moude.ai"
+  },
+  "homepage": "https://github.com/Arthurc1Moude/Geneia",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arthurc1Moude/Geneia.git"
+  },
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:electron\"",
     "dev:next": "next dev",
@@ -112,8 +121,9 @@
           "arch": ["x64"]
         }
       ],
-      "icon": "assets/icon.png",
+      "icon": "assets/icon.svg",
       "category": "Development",
+      "maintainer": "Arthur Moude <arthur@moude.ai>",
       "desktop": {
         "Name": "Geneia Installer",
         "Comment": "Install Geneia Programming Language IDE",

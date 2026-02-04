@@ -1,9 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <!-- Darker blue background circle - smaller to fit G -->
-  <circle cx="64" cy="64" r="42" fill="#5090d0"/>
+  <defs>
+    <!-- 3D gradient for blue background -->
+    <radialGradient id="bg3D" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" style="stop-color:#7ab8f0"/>
+      <stop offset="50%" style="stop-color:#5090d0"/>
+      <stop offset="100%" style="stop-color:#3060a0"/>
+    </radialGradient>
+    <!-- Shadow for depth -->
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow layer for 2.5D effect -->
+  <circle cx="66" cy="67" r="42" fill="#2050a0" opacity="0.3"/>
+  
+  <!-- Blue background circle with 3D gradient -->
+  <circle cx="64" cy="64" r="42" fill="url(#bg3D)"/>
+  
+  <!-- Highlight for 3D effect -->
+  <ellipse cx="54" cy="50" rx="20" ry="15" fill="white" opacity="0.25"/>
   
   <!-- G letter - thinner white ring with right horizontal bar -->
-  <g fill="white">
+  <g fill="white" filter="url(#shadow)">
     <!-- Main ring part of G (outer circle minus inner circle) - thinner -->
     <path d="M 64 24
              A 40 40 0 1 0 64 104
